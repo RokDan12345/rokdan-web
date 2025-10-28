@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const Landing3 = () => {
   const services = [
@@ -214,6 +215,8 @@ const Landing3 = () => {
           </div>
         </div>
       </footer>
+
+      <ScrollToTopButton className="bg-landing3-orange hover:bg-landing3-orange/90 text-white" />
     </div>
   );
 };
