@@ -1,22 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
 const Landing2 = () => {
-  const services = [
-    "Aires Acondicionados",
-    "Calderas a Gas y Gasoil",
-    "Lavadoras",
-    "Lavavajillas",
-    "Hornos",
-    "Vitrocerámica",
-    "Inducción",
-    "Cocinas a Gas",
-    "Neveras",
-  ];
-
-  return (
-    <div className="min-h-screen bg-landing2-bg font-sans">
+  const services = ["Aires Acondicionados", "Calderas a Gas y Gasoil", "Lavadoras", "Lavavajillas", "Hornos", "Vitrocerámica", "Inducción", "Cocinas a Gas", "Neveras"];
+  return <div className="min-h-screen bg-landing2-bg font-sans">
       {/* Navigation */}
       <nav className="bg-landing2-navy text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-16 py-5 flex justify-between items-center">
@@ -37,7 +24,7 @@ const Landing2 = () => {
       {/* Hero Section */}
       <section className="bg-landing2-navy text-white py-20 px-6 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="max-w-2xl">
+          <div className="max-w-screen-xl ">
             <div className="inline-block bg-landing2-cyan/20 text-landing2-cyan px-4 py-2 mb-6 font-semibold text-sm tracking-wider">
               SERVICIO TÉCNICO PROFESIONAL
             </div>
@@ -67,17 +54,12 @@ const Landing2 = () => {
             <div className="w-20 h-1 bg-landing2-cyan mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group bg-white border-2 border-landing2-navy/10 p-8 hover:border-landing2-cyan transition-all duration-300 cursor-pointer"
-              >
+            {services.map((service, index) => <div key={index} className="group bg-white border-2 border-landing2-navy/10 p-8 hover:border-landing2-cyan transition-all duration-300 cursor-pointer">
                 <h3 className="text-xl font-bold text-landing2-navy mb-2 group-hover:text-landing2-cyan transition-colors">
                   {service}
                 </h3>
                 <div className="w-0 h-0.5 bg-landing2-cyan group-hover:w-full transition-all duration-300"></div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -173,26 +155,11 @@ const Landing2 = () => {
           </div>
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Input 
-                placeholder="Nombre completo" 
-                className="border-2 border-landing2-navy/20 rounded-none py-6 focus:border-landing2-cyan"
-              />
-              <Input 
-                type="tel" 
-                placeholder="Teléfono" 
-                className="border-2 border-landing2-navy/20 rounded-none py-6 focus:border-landing2-cyan"
-              />
+              <Input placeholder="Nombre completo" className="border-2 border-landing2-navy/20 rounded-none py-6 focus:border-landing2-cyan" />
+              <Input type="tel" placeholder="Teléfono" className="border-2 border-landing2-navy/20 rounded-none py-6 focus:border-landing2-cyan" />
             </div>
-            <Input 
-              type="email" 
-              placeholder="Email" 
-              className="border-2 border-landing2-navy/20 rounded-none py-6 focus:border-landing2-cyan"
-            />
-            <Textarea 
-              placeholder="Describa el servicio que necesita" 
-              rows={6}
-              className="border-2 border-landing2-navy/20 rounded-none focus:border-landing2-cyan"
-            />
+            <Input type="email" placeholder="Email" className="border-2 border-landing2-navy/20 rounded-none py-6 focus:border-landing2-cyan" />
+            <Textarea placeholder="Describa el servicio que necesita" rows={6} className="border-2 border-landing2-navy/20 rounded-none focus:border-landing2-cyan" />
             <Button className="w-full bg-landing2-cyan hover:bg-landing2-blue text-white py-6 rounded-none font-semibold text-base">
               ENVIAR SOLICITUD →
             </Button>
@@ -226,8 +193,6 @@ const Landing2 = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Landing2;
