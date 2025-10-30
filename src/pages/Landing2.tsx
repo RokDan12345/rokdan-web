@@ -5,7 +5,7 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const Landing2 = () => {
   const services = ["Aires Acondicionados", "Calderas a Gas y Gasoil", "Lavadoras", "Lavavajillas", "Hornos", "Vitrocerámica", "Inducción", "Cocinas a Gas", "Neveras"];
-  return <div className="min-h-screen bg-landing2-bg font-sans">
+  return <div className="min-h-screen bg-landing2-bg font-montserrat">
       {/* Navigation */}
       <nav className="bg-landing2-navy text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-16 py-5 flex justify-between items-center">

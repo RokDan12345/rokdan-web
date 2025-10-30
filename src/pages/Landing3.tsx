@@ -17,7 +17,7 @@ const Landing3 = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-landing3-bg font-sans">
+    <div className="min-h-screen bg-landing3-bg font-poppins">
       {/* Navigation */}
       <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
