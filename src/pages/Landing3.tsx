@@ -16,6 +16,10 @@ const Landing3 = () => {
     "Neveras",
   ];
 
+  const scrollToContact = () => {
+    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-landing3-bg font-poppins">
       {/* Navigation */}
@@ -28,7 +32,7 @@ const Landing3 = () => {
             <a href="/" className="text-sm text-landing3-text hover:text-landing3-orange transition-colors">
               Ver otras propuestas
             </a>
-            <Button className="bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full px-6">
+            <Button onClick={scrollToContact} className="bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full px-6">
               Contactar
             </Button>
           </div>
@@ -49,7 +53,7 @@ const Landing3 = () => {
                 de electrodomésticos con rapidez y garantía total.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full px-8 py-6 text-lg">
+                <Button onClick={scrollToContact} className="bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full px-8 py-6 text-lg">
                   Pedir Cita
                 </Button>
                 <Button 
@@ -148,7 +152,7 @@ const Landing3 = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-6 lg:px-12">
+      <section id="contacto" className="py-20 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
           <div className="bg-landing3-blueDark rounded-3xl p-12 lg:p-16 text-white">
             <div className="text-center mb-12">

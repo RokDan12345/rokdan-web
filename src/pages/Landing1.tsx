@@ -16,6 +16,10 @@ const Landing1 = () => {
     "Neveras",
   ];
 
+  const scrollToContact = () => {
+    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-landing1-bg font-serif">
       {/* Navigation */}
@@ -28,7 +32,7 @@ const Landing1 = () => {
             <a href="/" className="text-sm text-landing1-text hover:text-landing1-orange transition-colors">
               Ver otras propuestas
             </a>
-            <Button className="bg-landing1-orange hover:bg-landing1-orange/90 text-white font-medium px-6">
+            <Button onClick={scrollToContact} className="bg-landing1-orange hover:bg-landing1-orange/90 text-white font-medium px-6">
               Contactar
             </Button>
           </div>
@@ -49,7 +53,7 @@ const Landing1 = () => {
               Compromiso con la calidad y el servicio excepcional.
             </p>
             <div className="flex gap-4">
-              <Button className="bg-landing1-blueDark hover:bg-landing1-blueDark/90 text-white px-8 py-6 text-lg">
+              <Button onClick={scrollToContact} className="bg-landing1-blueDark hover:bg-landing1-blueDark/90 text-white px-8 py-6 text-lg">
                 Solicitar Servicio
               </Button>
               <Button 
@@ -136,7 +140,7 @@ const Landing1 = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-24 bg-landing1-blueDark text-white">
+      <section id="contacto" className="py-24 bg-landing1-blueDark text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <h2 className="text-5xl font-light mb-4 text-center">
             <span className="font-bold italic">Contáctenos</span>

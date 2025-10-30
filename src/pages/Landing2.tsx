@@ -5,6 +5,11 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const Landing2 = () => {
   const services = ["Aires Acondicionados", "Calderas a Gas y Gasoil", "Lavadoras", "Lavavajillas", "Hornos", "Vitrocerámica", "Inducción", "Cocinas a Gas", "Neveras"];
+  
+  const scrollToContact = () => {
+    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return <div className="min-h-screen bg-landing2-bg font-montserrat">
       {/* Navigation */}
       <nav className="bg-landing2-navy text-white">
@@ -16,7 +21,7 @@ const Landing2 = () => {
             <a href="/" className="text-sm hover:text-landing2-cyan transition-colors">
               Ver otras propuestas
             </a>
-            <Button className="bg-landing2-cyan hover:bg-landing2-blue text-white font-semibold px-6 rounded-none">
+            <Button onClick={scrollToContact} className="bg-landing2-cyan hover:bg-landing2-blue text-white font-semibold px-6 rounded-none">
               Contacto
             </Button>
           </div>
@@ -39,7 +44,7 @@ const Landing2 = () => {
               Soluciones técnicas rápidas y eficientes para tu hogar. 
               Tecnología y experiencia al servicio de tus necesidades.
             </p>
-            <Button className="bg-landing2-cyan hover:bg-landing2-blue text-white px-10 py-6 text-base font-semibold rounded-none">
+            <Button onClick={scrollToContact} className="bg-landing2-cyan hover:bg-landing2-blue text-white px-10 py-6 text-base font-semibold rounded-none">
               SOLICITAR SERVICIO →
             </Button>
           </div>
@@ -135,7 +140,7 @@ const Landing2 = () => {
               <p className="text-white/80 mb-8">
                 Sin compromiso. Le respondemos en menos de 24 horas.
               </p>
-              <Button className="bg-landing2-cyan hover:bg-landing2-blue text-white px-8 py-6 rounded-none font-semibold">
+              <Button onClick={scrollToContact} className="bg-landing2-cyan hover:bg-landing2-blue text-white px-8 py-6 rounded-none font-semibold">
                 CONTACTAR AHORA →
               </Button>
             </div>
@@ -144,7 +149,7 @@ const Landing2 = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20 px-6 lg:px-16 bg-landing2-offWhite">
+      <section id="contacto" className="py-20 px-6 lg:px-16 bg-landing2-offWhite">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-landing2-navy mb-4">
