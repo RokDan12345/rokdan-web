@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import ContactBanner from "@/components/ContactBanner";
+import ServicesCarousel from "@/components/ServicesCarousel";
 
 const Landing3 = () => {
   const services = [
@@ -102,6 +103,9 @@ const Landing3 = () => {
           </div>
         </div>
       </section>
+
+      {/* Services Carousel */}
+      <ServicesCarousel services={services} accentColor="orange" className="bg-landing3-bg" />
 
       {/* Why Choose Us */}
       <section className="py-20 px-6 lg:px-12 bg-landing3-blueLight/20">

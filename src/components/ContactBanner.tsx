@@ -19,7 +19,7 @@ const ContactBanner = ({ className = "" }: ContactBannerProps) => {
         className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white shadow-md flex items-center justify-center hover:scale-110 transition-transform"
         aria-label="Cerrar banner"
       >
-        <X className="w-4 h-4" />
+        <X className="w-4 h-4 text-black" />
       </button>
       <div className="text-sm font-semibold mb-1">Servicio Permanente</div>
       <div className="text-base">

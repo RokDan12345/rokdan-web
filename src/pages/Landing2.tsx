@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import ContactBanner from "@/components/ContactBanner";
+import ServicesCarousel from "@/components/ServicesCarousel";
 
 const Landing2 = () => {
   const services = ["Aires Acondicionados", "Calderas a Gas y Gasoil", "Lavadoras", "Lavavajillas", "Hornos", "Vitrocerámica", "Inducción", "Cocinas a Gas", "Neveras"];
@@ -71,6 +72,9 @@ const Landing2 = () => {
           </div>
         </div>
       </section>
+
+      {/* Services Carousel */}
+      <ServicesCarousel services={services} accentColor="cyan" className="bg-landing2-offWhite" />
 
       {/* Stats Section */}
       <section className="bg-landing2-cyan text-white py-16 px-6 lg:px-16">
