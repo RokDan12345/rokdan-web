@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import ContactBanner from "@/components/ContactBanner";
 
 const Landing3 = () => {
   const services = [
@@ -221,6 +222,7 @@ const Landing3 = () => {
       </footer>
 
       <ScrollToTopButton className="bg-landing3-orange hover:bg-landing3-orange/90 text-white" />
+      <ContactBanner className="bg-landing3-orange text-white" />
     </div>
   );
 };

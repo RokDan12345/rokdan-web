@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import ContactBanner from "@/components/ContactBanner";
 
 const Landing2 = () => {
   const services = ["Aires Acondicionados", "Calderas a Gas y Gasoil", "Lavadoras", "Lavavajillas", "Hornos", "Vitrocerámica", "Inducción", "Cocinas a Gas", "Neveras"];
@@ -202,6 +203,7 @@ const Landing2 = () => {
       </footer>
 
       <ScrollToTopButton className="bg-landing2-cyan hover:bg-landing2-blue text-white rounded-none" />
+      <ContactBanner className="bg-landing2-cyan text-white rounded-none" />
     </div>;
 };
 export default Landing2;
