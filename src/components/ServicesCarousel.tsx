@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ServicesCarouselProps {
   services: string[];
@@ -9,18 +10,81 @@ interface ServicesCarouselProps {
 const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: ServicesCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const startAutoPlay = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
         setIsTransitioning(false);
       }, 300);
     }, 5000);
+  };
 
-    return () => clearInterval(interval);
-  }, [services.length]);
+  useEffect(() => {
+    startAutoPlay();
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleNext = () => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
+      setIsTransitioning(false);
+    }, 300);
+  };
+
+  const handlePrev = () => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + services.length) % services.length);
+      setIsTransitioning(false);
+    }, 300);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      handleNext();
+      startAutoPlay(); // Restart autoplay after manual interaction
+    }
+    if (isRightSwipe) {
+      handlePrev();
+      startAutoPlay(); // Restart autoplay after manual interaction
+    }
+
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
+
+  const handleButtonClick = (direction: 'next' | 'prev') => {
+    if (direction === 'next') {
+      handleNext();
+    } else {
+      handlePrev();
+    }
+    startAutoPlay(); // Restart autoplay after manual interaction
+  };
 
   // Map services to placeholder images (we'll use solid colors with service name)
   const getServiceImageStyle = (service: string) => {
@@ -62,8 +126,22 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
           </div>
         </div>
 
-        {/* Image Section */}
-        <div className="max-w-2xl mx-auto">
+        {/* Image Section with Navigation */}
+        <div className="max-w-2xl mx-auto relative">
+          {/* Previous Button */}
+          <button
+            onClick={() => handleButtonClick('prev')}
+            className={`hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-20 w-12 h-12 items-center justify-center rounded-full shadow-lg transition-all duration-200 hover:scale-110 ${
+              accentColor === 'cyan' ? 'bg-landing2-cyan hover:bg-landing2-cyan/90' : 
+              accentColor === 'orange-landing1' ? 'bg-landing1-orange hover:bg-landing1-orange/90' : 
+              'bg-landing3-orange hover:bg-landing3-orange/90'
+            } text-white`}
+            aria-label="Anterior"
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          {/* Carousel Image */}
           <div
             className={`relative h-96 rounded-3xl shadow-2xl transition-all duration-500 flex items-center justify-center text-white text-3xl font-bold ${
               isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
@@ -71,10 +149,26 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
             style={{
               background: getServiceImageStyle(services[currentIndex]),
             }}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
             <div className="absolute inset-0 bg-black/20 rounded-3xl"></div>
             <span className="relative z-10 text-center px-8">{services[currentIndex]}</span>
           </div>
+
+          {/* Next Button */}
+          <button
+            onClick={() => handleButtonClick('next')}
+            className={`hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-20 w-12 h-12 items-center justify-center rounded-full shadow-lg transition-all duration-200 hover:scale-110 ${
+              accentColor === 'cyan' ? 'bg-landing2-cyan hover:bg-landing2-cyan/90' : 
+              accentColor === 'orange-landing1' ? 'bg-landing1-orange hover:bg-landing1-orange/90' : 
+              'bg-landing3-orange hover:bg-landing3-orange/90'
+            } text-white`}
+            aria-label="Siguiente"
+          >
+            <ChevronRight size={24} />
+          </button>
         </div>
 
         {/* Progress Indicator */}

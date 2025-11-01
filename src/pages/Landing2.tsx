@@ -17,7 +17,7 @@ const Landing2 = () => {
       <nav className="bg-landing2-navy text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-16 py-5 flex justify-between items-center">
           <div className="text-xl font-bold tracking-wider uppercase">
-            Tech<span className="text-landing2-cyan">Repair</span>
+            SAT<span className="text-landing2-cyan">Funcional</span>
           </div>
           <div className="flex gap-8 items-center">
             <a href="/" className="text-sm hover:text-landing2-cyan transition-colors">
@@ -185,14 +185,14 @@ const Landing2 = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-xl font-bold mb-4 tracking-wider">
-                TECH<span className="text-landing2-cyan">REPAIR</span>
+                SAT<span className="text-landing2-cyan">FUNCIONAL</span>
               </h3>
               <p className="text-white/70">Servicio técnico profesional</p>
             </div>
             <div>
               <h4 className="font-bold mb-4 tracking-wider">CONTACTO</h4>
               <p className="text-white/70 mb-2">Tel: +34 900 123 456</p>
-              <p className="text-white/70">Email: info@techrepair.com</p>
+              <p className="text-white/70">Email: info@satfuncional.com</p>
             </div>
             <div>
               <h4 className="font-bold mb-4 tracking-wider">HORARIO</h4>
@@ -201,7 +201,7 @@ const Landing2 = () => {
             </div>
           </div>
           <div className="border-t border-white/10 pt-8 text-center text-white/60">
-            © 2025 TechRepair. Todos los derechos reservados.
+            © 2025 SatFuncional. Todos los derechos reservados.
           </div>
         </div>
       </footer>

@@ -28,7 +28,7 @@ const Landing3 = () => {
       <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold text-landing3-blueDark">
-            Tu<span className="text-landing3-orange">Técnico</span>
+            Sat<span className="text-landing3-orange">Funcional</span>
           </div>
           <div className="flex gap-6 items-center">
             <a href="/" className="text-sm text-landing3-text hover:text-landing3-orange transition-colors">
@@ -211,7 +211,7 @@ const Landing3 = () => {
             <div>
               <h4 className="font-bold text-landing3-blueDark mb-4">Contacto</h4>
               <p className="text-landing3-text/70 mb-2">📞 +34 900 123 456</p>
-              <p className="text-landing3-text/70">📧 hola@tutecnico.com</p>
+              <p className="text-landing3-text/70">📧 hola@satfuncional.com</p>
             </div>
             <div>
               <h4 className="font-bold text-landing3-blueDark mb-4">Horario</h4>
@@ -220,7 +220,7 @@ const Landing3 = () => {
             </div>
           </div>
           <div className="border-t border-landing3-blueDark/10 pt-8 text-center text-landing3-text/60">
-            © 2025 TuTécnico. Con cariño para tu hogar ❤️
+            © 2025 SatFuncional.
           </div>
         </div>
       </footer>

@@ -28,7 +28,7 @@ const Landing1 = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-landing1-bg/80 backdrop-blur-md border-b border-landing1-blueDark/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold text-landing1-blueDark tracking-wide">
-            TechServices
+            SatFuncional
           </div>
           <div className="flex gap-6 items-center">
             <a href="/" className="text-sm text-landing1-text hover:text-landing1-orange transition-colors">
@@ -187,13 +187,13 @@ const Landing1 = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold text-landing1-blueDark mb-4">TechServices</h3>
+              <h3 className="text-2xl font-bold text-landing1-blueDark mb-4">SatFuncional</h3>
               <p className="text-landing1-text/70">Servicios técnicos de excelencia</p>
             </div>
             <div>
               <h4 className="font-semibold text-landing1-blueDark mb-4">Contacto</h4>
               <p className="text-landing1-text/70 mb-2">Tel: +34 900 123 456</p>
-              <p className="text-landing1-text/70">Email: info@techservices.com</p>
+              <p className="text-landing1-text/70">Email: info@satfuncional.com</p>
             </div>
             <div>
               <h4 className="font-semibold text-landing1-blueDark mb-4">Horario</h4>
@@ -202,7 +202,7 @@ const Landing1 = () => {
             </div>
           </div>
           <div className="border-t border-landing1-blueDark/10 pt-8 text-center text-landing1-text/60">
-            © 2025 TechServices. Todos los derechos reservados.
+            © 2025 SatFuncional. Todos los derechos reservados.
           </div>
         </div>
       </footer>
