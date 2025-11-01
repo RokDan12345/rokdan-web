@@ -171,7 +171,8 @@ const Landing2 = () => {
               <Input type="tel" placeholder="Teléfono" className="border-2 border-landing2-navy/20 rounded-none py-6 focus:border-landing2-cyan" />
             </div>
             <Input type="email" placeholder="Email" className="border-2 border-landing2-navy/20 rounded-none py-6 focus:border-landing2-cyan" />
-            <Textarea placeholder="Describa el servicio que necesita" rows={6} className="border-2 border-landing2-navy/20 rounded-none focus:border-landing2-cyan" />
+            <Input placeholder="Servicio que necesita" className="border-2 border-landing2-navy/20 rounded-none py-6 focus:border-landing2-cyan" />
+            <Textarea placeholder="Describa el problema" rows={6} className="border-2 border-landing2-navy/20 rounded-none focus:border-landing2-cyan" />
             <Button className="w-full bg-landing2-cyan hover:bg-landing2-blue text-white py-6 rounded-none font-semibold text-base">
               ENVIAR SOLICITUD →
             </Button>

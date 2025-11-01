@@ -185,8 +185,12 @@ const Landing3 = () => {
                 placeholder="Tu email" 
                 className="bg-white/10 border-white/30 text-white placeholder:text-white/60 rounded-xl py-6"
               />
+              <Input 
+                placeholder="Servicio que necesitas" 
+                className="bg-white/10 border-white/30 text-white placeholder:text-white/60 rounded-xl py-6"
+              />
               <Textarea 
-                placeholder="¿Qué necesitas reparar?" 
+                placeholder="Describa el problema" 
                 rows={5}
                 className="bg-white/10 border-white/30 text-white placeholder:text-white/60 rounded-xl"
               />
