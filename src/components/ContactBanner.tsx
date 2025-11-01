@@ -12,7 +12,7 @@ const ContactBanner = ({ className = "" }: ContactBannerProps) => {
 
   return (
     <div 
-      className={`fixed top-20 right-6 z-40 max-w-sm shadow-lg rounded-lg p-4 animate-in slide-in-from-right duration-500 ${className}`}
+      className={`fixed top-20 right-2 sm:right-4 md:right-6 z-40 max-w-[280px] sm:max-w-sm shadow-lg rounded-lg p-3 sm:p-4 animate-in slide-in-from-right duration-500 ${className}`}
     >
       <button
         onClick={() => setIsVisible(false)}
@@ -21,9 +21,9 @@ const ContactBanner = ({ className = "" }: ContactBannerProps) => {
       >
         <X className="w-4 h-4 text-black" />
       </button>
-      <div className="text-sm font-semibold mb-1">Servicio Permanente</div>
-      <div className="text-base">
-        Llame ahora: <a href="tel:+34659016094" className="font-bold hover:underline">+34 659 016 094</a>
+      <div className="text-xs sm:text-sm font-semibold mb-1">Servicio Permanente</div>
+      <div className="text-sm sm:text-base">
+        Llame ahora: <a href="tel:+34659016094" className="font-bold hover:underline break-all">+34 659 016 094</a>
       </div>
     </div>
   );

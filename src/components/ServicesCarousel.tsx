@@ -103,8 +103,8 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
   };
 
   return (
-    <div className={`py-20 ${className}`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <div className={`py-20 overflow-hidden ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="text-center mb-12">
           <h2 className={`text-4xl font-bold mb-8 ${accentColor === 'cyan' ? 'text-landing2-navy' : accentColor === 'orange-landing1' ? 'text-landing1-blueDark' : 'text-landing3-blueDark'}`}>
             Reparamos
@@ -127,11 +127,11 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
         </div>
 
         {/* Image Section with Navigation */}
-        <div className="max-w-2xl mx-auto relative">
+        <div className="max-w-2xl mx-auto relative px-4 md:px-0">
           {/* Previous Button */}
           <button
             onClick={() => handleButtonClick('prev')}
-            className={`hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-20 w-12 h-12 items-center justify-center rounded-full shadow-lg transition-all duration-200 hover:scale-110 ${
+            className={`hidden lg:flex absolute -left-4 xl:-left-16 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center rounded-full shadow-lg transition-all duration-200 hover:scale-110 ${
               accentColor === 'cyan' ? 'bg-landing2-cyan hover:bg-landing2-cyan/90' : 
               accentColor === 'orange-landing1' ? 'bg-landing1-orange hover:bg-landing1-orange/90' : 
               'bg-landing3-orange hover:bg-landing3-orange/90'
@@ -143,7 +143,7 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
 
           {/* Carousel Image */}
           <div
-            className={`relative h-96 rounded-3xl shadow-2xl transition-all duration-500 flex items-center justify-center text-white text-3xl font-bold ${
+            className={`relative h-64 sm:h-80 lg:h-96 rounded-3xl shadow-2xl transition-all duration-500 flex items-center justify-center text-white text-xl sm:text-2xl lg:text-3xl font-bold ${
               isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
             }`}
             style={{
@@ -160,7 +160,7 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
           {/* Next Button */}
           <button
             onClick={() => handleButtonClick('next')}
-            className={`hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-20 w-12 h-12 items-center justify-center rounded-full shadow-lg transition-all duration-200 hover:scale-110 ${
+            className={`hidden lg:flex absolute -right-4 xl:-right-16 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center rounded-full shadow-lg transition-all duration-200 hover:scale-110 ${
               accentColor === 'cyan' ? 'bg-landing2-cyan hover:bg-landing2-cyan/90' : 
               accentColor === 'orange-landing1' ? 'bg-landing1-orange hover:bg-landing1-orange/90' : 
               'bg-landing3-orange hover:bg-landing3-orange/90'

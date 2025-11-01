@@ -41,12 +41,12 @@ const ScrollToTopButton = ({ className }: ScrollToTopButtonProps) => {
     <Button
       onClick={scrollToTop}
       className={cn(
-        "fixed bottom-8 right-8 z-50 h-12 w-12 rounded-full p-0 shadow-lg transition-all hover:scale-110",
+        "fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 h-10 w-10 sm:h-12 sm:w-12 rounded-full p-0 shadow-lg transition-all hover:scale-110",
         className
       )}
       aria-label="Volver arriba"
     >
-      <ArrowUp className="h-5 w-5" />
+      <ArrowUp className="h-4 w-4 sm:h-5 sm:w-5" />
     </Button>
   );
 };

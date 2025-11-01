@@ -12,18 +12,18 @@ const Landing2 = () => {
     document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  return <div className="min-h-screen bg-landing2-bg font-montserrat">
+  return <div className="min-h-screen bg-landing2-bg font-montserrat overflow-x-hidden">
       {/* Navigation */}
       <nav className="bg-landing2-navy text-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-5 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-5 flex justify-between items-center flex-wrap gap-2">
           <div className="text-xl font-bold tracking-wider uppercase">
             SAT<span className="text-landing2-cyan">Funcional</span>
           </div>
-          <div className="flex gap-8 items-center">
-            <a href="/" className="text-sm hover:text-landing2-cyan transition-colors">
+          <div className="flex gap-3 sm:gap-8 items-center">
+            <a href="/" className="text-xs sm:text-sm hover:text-landing2-cyan transition-colors">
               Ver otras propuestas
             </a>
-            <Button onClick={scrollToContact} className="bg-landing2-cyan hover:bg-landing2-blue text-white font-semibold px-6 rounded-none">
+            <Button onClick={scrollToContact} className="bg-landing2-cyan hover:bg-landing2-blue text-white font-semibold px-4 sm:px-6 rounded-none text-sm">
               Contacto
             </Button>
           </div>
@@ -31,13 +31,13 @@ const Landing2 = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-landing2-navy text-white py-20 px-6 lg:px-16">
+      <section className="bg-landing2-navy text-white py-20 px-4 sm:px-6 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="max-w-screen-xl ">
-            <div className="inline-block bg-landing2-cyan/20 text-landing2-cyan px-4 py-2 mb-6 font-semibold text-sm tracking-wider">
+          <div className="max-w-screen-xl">
+            <div className="inline-block bg-landing2-cyan/20 text-landing2-cyan px-4 py-2 mb-6 font-semibold text-xs sm:text-sm tracking-wider">
               SERVICIO TÉCNICO PROFESIONAL
             </div>
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight break-words">
               Reparación e Instalación
               <br />
               de Electrodomésticos
@@ -54,7 +54,7 @@ const Landing2 = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-6 lg:px-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-landing2-navy mb-4">
@@ -77,7 +77,7 @@ const Landing2 = () => {
       <ServicesCarousel services={services} accentColor="cyan" className="bg-landing2-offWhite" />
 
       {/* Stats Section */}
-      <section className="bg-landing2-cyan text-white py-16 px-6 lg:px-16">
+      <section className="bg-landing2-cyan text-white py-16 px-4 sm:px-6 lg:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div>
@@ -97,7 +97,7 @@ const Landing2 = () => {
       </section>
 
       {/* Trust Section */}
-      <section className="py-20 px-6 lg:px-16 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
@@ -154,7 +154,7 @@ const Landing2 = () => {
       </section>
 
       {/* Contact Form */}
-      <section id="contacto" className="py-20 px-6 lg:px-16 bg-landing2-offWhite">
+      <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-16 bg-landing2-offWhite">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-landing2-navy mb-4">
@@ -180,7 +180,7 @@ const Landing2 = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-landing2-navy text-white py-12 px-6 lg:px-16">
+      <footer className="bg-landing2-navy text-white py-12 px-4 sm:px-6 lg:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>

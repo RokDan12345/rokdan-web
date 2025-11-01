@@ -23,18 +23,18 @@ const Landing1 = () => {
   };
 
   return (
-    <div className="min-h-screen bg-landing1-bg font-serif">
+    <div className="min-h-screen bg-landing1-bg font-serif overflow-x-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-landing1-bg/80 backdrop-blur-md border-b border-landing1-blueDark/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-4 flex justify-between items-center flex-wrap gap-2">
           <div className="text-2xl font-bold text-landing1-blueDark tracking-wide">
             SatFuncional
           </div>
-          <div className="flex gap-6 items-center">
-            <a href="/" className="text-sm text-landing1-text hover:text-landing1-orange transition-colors">
+          <div className="flex gap-3 sm:gap-6 items-center">
+            <a href="/" className="text-xs sm:text-sm text-landing1-text hover:text-landing1-orange transition-colors">
               Ver otras propuestas
             </a>
-            <Button onClick={scrollToContact} className="bg-landing1-orange hover:bg-landing1-orange/90 text-white font-medium px-6">
+            <Button onClick={scrollToContact} className="bg-landing1-orange hover:bg-landing1-orange/90 text-white font-medium px-4 sm:px-6 text-sm">
               Contactar
             </Button>
           </div>
@@ -42,19 +42,19 @@ const Landing1 = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 px-6 lg:px-12">
+      <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <h1 className="text-6xl lg:text-7xl font-light text-landing1-blueDark mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-light text-landing1-blueDark mb-6 leading-tight break-words">
               Servicios Técnicos
               <br />
               <span className="font-bold italic">de Excelencia</span>
             </h1>
-            <p className="text-xl text-landing1-text/80 mb-10 leading-relaxed">
+            <p className="text-base sm:text-xl text-landing1-text/80 mb-10 leading-relaxed">
               Reparación e instalación profesional de electrodomésticos y sistemas de climatización. 
               Compromiso con la calidad y el servicio excepcional.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <Button onClick={scrollToContact} className="bg-landing1-blueDark hover:bg-landing1-blueDark/90 text-white px-8 py-6 text-lg">
                 Solicitar Servicio
               </Button>
@@ -71,8 +71,8 @@ const Landing1 = () => {
 
       {/* Services Section */}
       <section className="py-24 bg-landing1-cream/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h2 className="text-5xl font-light text-landing1-blueDark mb-4 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-landing1-blueDark mb-4 text-center break-words">
             Nuestros <span className="font-bold italic">Servicios</span>
           </h2>
           <p className="text-center text-landing1-text/70 mb-16 text-lg">
@@ -101,7 +101,7 @@ const Landing1 = () => {
 
       {/* Trust Section */}
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-5xl font-light text-landing1-blueDark mb-6">
@@ -146,7 +146,7 @@ const Landing1 = () => {
 
       {/* Contact Form */}
       <section id="contacto" className="py-24 bg-landing1-blueDark text-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">
           <h2 className="text-5xl font-light mb-4 text-center">
             <span className="font-bold italic">Contáctenos</span>
           </h2>
@@ -184,7 +184,7 @@ const Landing1 = () => {
 
       {/* Footer */}
       <footer className="bg-landing1-bg border-t border-landing1-blueDark/10 py-12">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-2xl font-bold text-landing1-blueDark mb-4">SatFuncional</h3>

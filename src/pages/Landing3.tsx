@@ -23,18 +23,18 @@ const Landing3 = () => {
   };
 
   return (
-    <div className="min-h-screen bg-landing3-bg font-poppins">
+    <div className="min-h-screen bg-landing3-bg font-poppins overflow-x-hidden">
       {/* Navigation */}
       <nav className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-4 flex justify-between items-center flex-wrap gap-2">
           <div className="text-2xl font-bold text-landing3-blueDark">
             Sat<span className="text-landing3-orange">Funcional</span>
           </div>
-          <div className="flex gap-6 items-center">
-            <a href="/" className="text-sm text-landing3-text hover:text-landing3-orange transition-colors">
+          <div className="flex gap-3 sm:gap-6 items-center">
+            <a href="/" className="text-xs sm:text-sm text-landing3-text hover:text-landing3-orange transition-colors">
               Ver otras propuestas
             </a>
-            <Button onClick={scrollToContact} className="bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full px-6">
+            <Button onClick={scrollToContact} className="bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full px-4 sm:px-6 text-sm">
               Contactar
             </Button>
           </div>
@@ -42,11 +42,11 @@ const Landing3 = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-6 lg:px-12">
+      <section className="py-20 px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-landing3-blueDark mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-landing3-blueDark mb-6 leading-tight break-words">
                 Reparamos tu hogar con
                 <span className="text-landing3-orange"> confianza</span>
               </h1>
@@ -78,7 +78,7 @@ const Landing3 = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-6 lg:px-12 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-landing3-blueDark mb-4">
@@ -108,7 +108,7 @@ const Landing3 = () => {
       <ServicesCarousel services={services} accentColor="orange" className="bg-landing3-bg" />
 
       {/* Why Choose Us */}
-      <section className="py-20 px-6 lg:px-12 bg-landing3-blueLight/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-12 bg-landing3-blueLight/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-landing3-blueDark mb-4">
@@ -157,7 +157,7 @@ const Landing3 = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contacto" className="py-20 px-6 lg:px-12">
+      <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
           <div className="bg-landing3-blueDark rounded-3xl p-12 lg:p-16 text-white">
             <div className="text-center mb-12">
@@ -199,7 +199,7 @@ const Landing3 = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white py-12 px-6 lg:px-12 border-t border-landing3-blueDark/10">
+      <footer className="bg-white py-12 px-4 sm:px-6 lg:px-12 border-t border-landing3-blueDark/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
