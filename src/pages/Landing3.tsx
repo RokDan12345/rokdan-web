@@ -208,7 +208,7 @@ const Landing3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-2xl font-bold text-landing3-blueDark mb-4">
-                Tu<span className="text-landing3-orange">Técnico</span>
+                Sat<span className="text-landing3-orange">Funcional</span>
               </h3>
               <p className="text-landing3-text/70">Tu servicio técnico de confianza</p>
             </div>
