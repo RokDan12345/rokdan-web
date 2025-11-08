@@ -2,15 +2,7 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-interface RequestBody {
-  name: string;
-  phone: string;
-  email: string;
-  service: string;
-  message: string;
-}
-
-export default async function handler(req: { method?: string; body: RequestBody }, res: { status: (code: number) => { json: (data: unknown) => void } }) {
+export default async function handler(req, res) {
   // Only allow POST requests
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -26,7 +18,7 @@ export default async function handler(req: { method?: string; body: RequestBody 
 
     // Send email using Resend
     const data = await resend.emails.send({
-      from: 'SatFuncional <onboarding@resend.dev>', // En producción cambiarás esto por tu dominio verificado
+      from: 'SatFuncional <onboarding@resend.dev>',
       to: ['lucas.workspace.1997@gmail.com'],
       subject: `Nueva solicitud de servicio: ${service}`,
       html: `
