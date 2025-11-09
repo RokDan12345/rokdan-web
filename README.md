@@ -8,7 +8,7 @@ Página web profesional para **SatFuncional**, empresa de servicios técnicos es
 
 **Estado actual**: ✅ Funcional en modo de prueba  
 **URL temporal**: https://tech-trio-pages.vercel.app  
-**Repositorio**: https://github.com/LucasSA97/tech-trio-pages (Privado)
+**Repositorio**: https://github.com/LucasSA97/sat-funcional-web (Privado)
 
 ---
 
@@ -49,17 +49,19 @@ Página web profesional para **SatFuncional**, empresa de servicios técnicos es
   - Costo aproximado: $10-15 USD/año
 
 - [ ] **2. Configurar Resend con el dominio nuevo**
+  - Crear cuenta en Resend 
   - Agregar dominio en https://resend.com/domains
   - Configurar registros DNS (ver sección "Configuración DNS" abajo)
   - Esperar verificación del dominio
   - Actualizar `from:` en `api/send-email.js` (cambiar de `onboarding@resend.dev` a `contacto@tudominio.com`)
 
 - [ ] **3. Crear cuenta Gmail para el proyecto**
-  - Email sugerido: `contacto@satfuncional` o `info.satfuncional@gmail.com`
+  - Creada ya cuenta de gmail satfuncionalmallorca.web@gmail.com
   - Usar para recibir emails del formulario de contacto
   - Actualizar `to:` en `api/send-email.js`
 
 - [ ] **4. Crear cuenta GitHub con el email del proyecto**
+  - Creada ya cuenta de github con satfuncionalmallorca.web@gmail.com
   - Registrarse en GitHub con el nuevo email de empresa
   - Usuario sugerido: `satfuncional` o `satfuncional-empresa`
   - Habilitar 2FA (autenticación de dos factores)
