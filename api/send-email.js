@@ -46,7 +46,7 @@ export default async function handler(req, res) {
     // Send email using Resend
     const data = await resend.emails.send({
       from: 'SatFuncional <onboarding@resend.dev>',
-      to: ['lucassarachu7@gmail.com'],
+      to: ['satfuncionalmallorca@gmail.com'],
       subject: `Nueva solicitud de servicio: ${service}`,
       html: `
         <!DOCTYPE html>
