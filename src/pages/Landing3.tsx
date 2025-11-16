@@ -74,7 +74,8 @@ const Landing3 = () => {
                 <Button onClick={scrollToContact} className="bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full px-8 py-6 text-lg">
                   Pedir Cita
                 </Button>
-                <a href="tel:+34632208757">
+                {/* Solo visible en mobile */}
+                <a href="tel:+34632208757" className="lg:hidden">
                   <Button 
                     variant="outline" 
                     className="border-2 border-landing3-blueDark text-landing3-blueDark hover:bg-landing3-blueDark hover:text-white rounded-full px-8 py-6 text-lg"
@@ -316,13 +317,13 @@ const Landing3 = () => {
             </div>
             <div>
               <h4 className="font-bold text-landing3-blueDark mb-4">Contacto</h4>
-              <p className="text-landing3-text/70 mb-2">📞 +34 632 208 757</p>
+              <p className="text-landing3-text/70 mb-2">📞 <a href="tel:+34632208757" className="lg:pointer-events-none lg:cursor-text">+34 632 208 757</a></p>
               <p className="text-landing3-text/70">📧 satfuncionalmallorca@gmail.com</p>
             </div>
             <div>
               <h4 className="font-bold text-landing3-blueDark mb-4">Horario</h4>
               <p className="text-landing3-text/70 mb-2">Lunes a Viernes: 10:00 - 18:00</p>
-              <p className="text-landing3-text/70">Sábados y Domingos: Cerrado</p>
+              {/* <p className="text-landing3-text/70">Sábados y Domingos: Cerrado</p> */}
             </div>
           </div>
           <div className="border-t border-landing3-blueDark/10 pt-8 text-center text-landing3-text/60">
