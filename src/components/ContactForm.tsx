@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Loader2, CheckCircle2, XCircle } from "lucide-react";
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 // Schema de validación
 const contactFormSchema = z.object({
@@ -25,6 +26,7 @@ interface ContactFormProps {
 const ContactForm = ({ className = "" }: ContactFormProps) => {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const {
     register,
@@ -40,12 +42,22 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
     setErrorMessage("");
 
     try {
+      // Ejecutar reCAPTCHA v3
+      if (!executeRecaptcha) {
+        throw new Error("reCAPTCHA no está disponible");
+      }
+
+      const recaptchaToken = await executeRecaptcha('contact_form');
+
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          recaptchaToken, // Enviar el token al backend
+        }),
       });
 
       if (!response.ok) {

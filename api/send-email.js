@@ -9,12 +9,39 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, phone, email, service, message } = req.body;
+    const { name, phone, email, service, message, recaptchaToken } = req.body;
 
     // Validate required fields
     if (!name || !phone || !email || !service || !message) {
       return res.status(400).json({ error: 'Todos los campos son requeridos' });
     }
+
+    // Validate reCAPTCHA token
+    if (!recaptchaToken) {
+      return res.status(400).json({ error: 'Token de reCAPTCHA no proporcionado' });
+    }
+
+    // Verify reCAPTCHA with Google
+    const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+    });
+
+    const recaptchaData = await recaptchaResponse.json();
+
+    // Check if reCAPTCHA verification was successful
+    if (!recaptchaData.success || recaptchaData.score < 0.5) {
+      console.error('reCAPTCHA verification failed:', recaptchaData);
+      return res.status(400).json({ 
+        error: 'Verificación de seguridad fallida. Por favor, intenta nuevamente.',
+        details: recaptchaData 
+      });
+    }
+
+    console.log('reCAPTCHA score:', recaptchaData.score);
 
     // Send email using Resend
     const data = await resend.emails.send({

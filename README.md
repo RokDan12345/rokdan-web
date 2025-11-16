@@ -43,9 +43,8 @@ Página web profesional para **SatFuncional**, empresa de servicios técnicos es
 
 ### 🔴 **Prioridad Alta - Configuración de Producción**
 
-- [ ] **1. Comprar dominio**
-  - Opciones recomendadas: GoDaddy, Namecheap, Google Domains
-  - Costo aproximado: $10-15 USD/año
+- [x] **1. Comprar dominio**
+  - ✅ Dominio adquirido: **satfuncionalmallorca.com**
 
 - [ ] **2. Configurar Resend con el dominio nuevo**
   - Crear cuenta en Resend 
