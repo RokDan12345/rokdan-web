@@ -17,6 +17,9 @@ const Landing3 = () => {
     "Inducción",
     "Cocinas a Gas",
     "Neveras",
+    "Campanas Extractoras",
+    "Televisores",
+    "Calentadores de Agua",
   ];
 
   const [openAccordionItem, setOpenAccordionItem] = useState<string>("");
@@ -46,8 +49,8 @@ const Landing3 = () => {
       {/* Navigation */}
       <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-4 flex justify-between items-center flex-wrap gap-2">
-          <div className="text-2xl font-bold text-landing3-blueDark">
-            Sat<span className="text-landing3-orange">Funcional</span>
+          <div className="flex items-center">
+            <img src="/logo-navbar.webp" alt="SatFuncional Logo" className="navbar-logo" />
           </div>
           <div className="flex gap-3 sm:gap-6 items-center">
             <Button onClick={scrollToContact} className="bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full px-4 sm:px-6 text-sm">
@@ -235,6 +238,36 @@ const Landing3 = () => {
                 fallos en el compresor y cualquier avería. Atención urgente para evitar pérdida de alimentos.
               </AccordionContent>
             </AccordionItem>
+
+            <AccordionItem value="item-10" data-accordion-value="item-10" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                Campanas Extractoras
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                Instalación y reparación de campanas extractoras. Solucionamos problemas de extracción, ruidos excesivos, 
+                sistemas de filtrado y motores. Mantenimiento preventivo para garantizar un ambiente limpio en tu cocina.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-11" data-accordion-value="item-11" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                Televisores
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                Reparación de televisores LED, LCD y Smart TV. Solucionamos problemas de imagen, sonido, conectividad 
+                y componentes internos. Diagnóstico profesional y repuestos de calidad.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-12" data-accordion-value="item-12" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                Calentadores de Agua
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                Instalación, mantenimiento y reparación de calentadores eléctricos y a gas. Solucionamos problemas de 
+                temperatura, fugas, termostatos y resistencias. Servicio urgente para recuperar el agua caliente.
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </section>
@@ -317,8 +350,8 @@ const Landing3 = () => {
             </div>
             <div>
               <h4 className="font-bold text-landing3-blueDark mb-4">Contacto</h4>
-              <p className="text-landing3-text/70 mb-2">📞 <a href="tel:+34632208757" className="lg:pointer-events-none lg:cursor-text">+34 632 208 757</a></p>
-              <p className="text-landing3-text/70">📧 satfuncionalmallorca@gmail.com</p>
+              <p className="text-landing3-text/70 mb-2"><a href="tel:+34632208757" className="lg:pointer-events-none lg:cursor-text">+34 632 208 757</a></p>
+              <p className="text-landing3-text/70">satfuncionalmallorca@gmail.com</p>
             </div>
             <div>
               <h4 className="font-bold text-landing3-blueDark mb-4">Horario</h4>
