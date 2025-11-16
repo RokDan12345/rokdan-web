@@ -45,7 +45,6 @@ Página web profesional para **SatFuncional**, empresa de servicios técnicos es
 
 - [ ] **1. Comprar dominio**
   - Opciones recomendadas: GoDaddy, Namecheap, Google Domains
-  - Sugerencia: `satfuncional.com` o `satfuncional.com.ar`
   - Costo aproximado: $10-15 USD/año
 
 - [ ] **2. Configurar Resend con el dominio nuevo**
@@ -110,7 +109,6 @@ Página web profesional para **SatFuncional**, empresa de servicios técnicos es
 - [ ] Testimonios de clientes
 - [ ] Blog/Noticias
 - [ ] Integración con WhatsApp Business
-- [ ] Chat en vivo
 - [ ] Sistema de citas online
 - [ ] Panel de administración
 - [ ] Google Analytics
