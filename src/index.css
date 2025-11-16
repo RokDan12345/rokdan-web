@@ -79,8 +79,8 @@ All colors MUST be HSL.
   }
 
   .navbar-logo {
-    max-height: 80px;
-    width: auto;
+    width: 240px;
+    height: 80px;
     object-fit: contain;
     transition: transform 0.2s ease-in-out;
   }
@@ -91,7 +91,8 @@ All colors MUST be HSL.
 
   @media (max-width: 640px) {
     .navbar-logo {
-      max-height: 64px;
+      width: 192px;
+      height: 64px;
     }
   }
 }

@@ -12,7 +12,27 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState<Set<string>>(new Set());
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Preload all images when component mounts
+  useEffect(() => {
+    const preloadImages = () => {
+      services.forEach((service) => {
+        const img = new Image();
+        img.src = getServiceImage(service);
+        img.onload = () => {
+          setImagesLoaded((prev) => new Set(prev).add(service));
+        };
+        img.onerror = () => {
+          // Image failed to load, will use gradient fallback
+          console.log(`Image not found for ${service}, using gradient`);
+        };
+      });
+    };
+    
+    preloadImages();
+  }, [services]);
 
   const startAutoPlay = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -86,6 +106,25 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
     startAutoPlay(); // Restart autoplay after manual interaction
   };
 
+  // Map services to their images
+  const getServiceImage = (service: string) => {
+    const imageMap: { [key: string]: string } = {
+      "Aires Acondicionados": "/services/aire-acondicionado.webp",
+      "Calderas a Gas y Gasoil": "/services/calderas.webp",
+      "Lavadoras": "/services/lavadoras.webp",
+      "Lavavajillas": "/services/lavavajillas.webp",
+      "Hornos": "/services/hornos.webp",
+      "Vitrocerámica": "/services/vitroceramica.webp",
+      "Inducción": "/services/induccion.webp",
+      "Cocinas a Gas": "/services/cocinas-gas.webp",
+      "Neveras": "/services/neveras.webp",
+      "Campanas Extractoras": "/services/campanas.webp",
+      "Televisores": "/services/televisores.webp",
+      "Calentadores de Agua": "/services/calentadores.webp",
+    };
+    return imageMap[service] || "/placeholder.svg";
+  };
+
   // Map services to placeholder images (we'll use solid colors with service name)
   const getServiceImageStyle = (service: string) => {
     const colors = [
@@ -104,6 +143,18 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
 
   return (
     <div className={`py-20 overflow-hidden ${className}`}>
+      {/* Hidden preloaded images for browser caching */}
+      <div className="hidden">
+        {services.map((service, idx) => (
+          <img
+            key={`preload-${idx}`}
+            src={getServiceImage(service)}
+            alt={service}
+            loading="eager"
+          />
+        ))}
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="text-center mb-12">
           <h2 className={`text-4xl font-bold mb-8 ${accentColor === 'cyan' ? 'text-landing2-navy' : accentColor === 'orange-landing1' ? 'text-landing1-blueDark' : 'text-landing3-blueDark'}`}>
@@ -143,18 +194,43 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
 
           {/* Carousel Image */}
           <div
-            className={`relative h-64 sm:h-80 lg:h-96 rounded-3xl shadow-2xl transition-all duration-500 flex items-center justify-center text-white text-xl sm:text-2xl lg:text-3xl font-bold ${
+            className={`relative h-64 sm:h-80 lg:h-96 rounded-3xl shadow-2xl transition-all duration-500 overflow-hidden ${
               isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
             }`}
-            style={{
-              background: getServiceImageStyle(services[currentIndex]),
-            }}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
-            <div className="absolute inset-0 bg-black/20 rounded-3xl"></div>
-            <span className="relative z-10 text-center px-8">{services[currentIndex]}</span>
+            {/* Background Image */}
+            <img
+              key={`carousel-${currentIndex}`}
+              src={getServiceImage(services[currentIndex])}
+              alt={services[currentIndex]}
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+              onError={(e) => {
+                // Fallback to gradient if image fails to load
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+              }}
+            />
+            {/* Fallback gradient background */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: getServiceImageStyle(services[currentIndex]),
+                zIndex: -1,
+              }}
+            ></div>
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/30"></div>
+            {/* Service name */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="relative z-10 text-center px-8 text-white text-xl sm:text-2xl lg:text-3xl font-bold drop-shadow-lg">
+                {services[currentIndex]}
+              </span>
+            </div>
           </div>
 
           {/* Next Button */}

@@ -50,7 +50,14 @@ const Landing3 = () => {
       <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-4 flex justify-between items-center flex-wrap gap-2">
           <div className="flex items-center">
-            <img src="/logo-navbar.webp" alt="SatFuncional Logo" className="navbar-logo" />
+            <img 
+              src="/logo-navbar.webp" 
+              alt="SatFuncional Logo" 
+              className="navbar-logo" 
+              width="240" 
+              height="80"
+              loading="eager"
+            />
           </div>
           <div className="flex gap-3 sm:gap-6 items-center">
             <Button onClick={scrollToContact} className="bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full px-4 sm:px-6 text-sm">
