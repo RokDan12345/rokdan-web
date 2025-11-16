@@ -47,22 +47,27 @@ Página web profesional para **SatFuncional**, empresa de servicios técnicos es
   - ✅ Dominio adquirido: **satfuncionalmallorca.com**
 
 - [ ] **2. Configurar Resend con el dominio nuevo**
-  - Crear cuenta en Resend 
-  - Agregar dominio en https://resend.com/domains
-  - Configurar registros DNS (ver sección "Configuración DNS" abajo)
-  - Esperar verificación del dominio
-  - Actualizar `from:` en `api/send-email.js` (cambiar de `onboarding@resend.dev` a `contacto@tudominio.com`)
+- [ ] **2. Configurar Resend con el dominio nuevo**
+  - ✅ Cuenta creada en Resend con `satfuncionalmallorca.web@gmail.com`
+  - ✅ API Key generada: `satfuncional-production` → `re_LZMrSVfG_BQ66dVrzdkx7QBW9TvEKFXzC`
+  - [ ] Agregar dominio en https://resend.com/domains → **satfuncionalmallorca.com**
+  - [ ] Configurar registros DNS (ver sección "Configuración DNS" abajo)
+  - [ ] Esperar verificación del dominio (puede tomar hasta 48 horas)
+  - [ ] Una vez verificado, descomentar línea 49 en `api/send-email.js`
+  - ⚠️ **NOTA**: Resend gestiona el email automáticamente. El remitente será `@satfuncionalmallorca.com` (no necesitas crear el email)
 
-- [ ] **3. Crear cuenta Gmail para el proyecto**
-  - Creada ya cuenta de gmail satfuncionalmallorca.web@gmail.com
-  - Usar para recibir emails del formulario de contacto
-  - Actualizar `to:` en `api/send-email.js`
+- [ ] **3. Emails del proyecto - ACLARACIÓN IMPORTANTE**
+  - ✅ **Cuenta de servicios**: `satfuncionalmallorca.web@gmail.com`
+    - Para: GitHub, Vercel, Resend (cuentas de servicios)
+    - NO recibe emails del formulario
+  - ✅ **Cuenta de administración**: `satfuncionalmallorca@gmail.com`
+    - Para: Recibir emails del formulario de contacto
+    - Ya configurada en `api/send-email.js` línea 50
+  - **Remitente**: Una vez DNS verificado → `contacto@satfuncionalmallorca.com` (Resend lo gestiona)
 
 - [ ] **4. Crear cuenta GitHub con el email del proyecto**
-  - Creada ya cuenta de github con satfuncionalmallorca.web@gmail.com
-  - Registrarse en GitHub con el nuevo email de empresa
-  - Usuario sugerido: `satfuncional` o `satfuncional-empresa`
-  - Habilitar 2FA (autenticación de dos factores)
+  - ✅ Cuenta creada con `satfuncionalmallorca.web@gmail.com`
+  - [ ] Habilitar 2FA (autenticación de dos factores)
 
 - [ ] **5. Crear cuenta Vercel con GitHub de empresa**
   - Registrarse en Vercel usando la cuenta GitHub de empresa
@@ -103,15 +108,39 @@ Página web profesional para **SatFuncional**, empresa de servicios técnicos es
 
 ### 🟢 **Prioridad Baja - Mejoras Futuras**
 
+#### **Contenido:**
 - [ ] Agregar página de "Sobre Nosotros"
 - [ ] Galería de trabajos realizados
 - [ ] Testimonios de clientes
 - [ ] Blog/Noticias
-- [ ] Integración con WhatsApp Business
 - [ ] Sistema de citas online
+
+#### **Funcionalidades:**
+- [ ] Integración con WhatsApp Business
+- [ ] Chat en vivo (Tawk.to o similar)
 - [ ] Panel de administración
-- [ ] Google Analytics
-- [ ] Google Search Console
+
+#### **Optimizaciones técnicas:**
+- [ ] 📊 **Google Analytics**: Para métricas y análisis de tráfico
+  - Configurar cuenta: https://analytics.google.com/
+  - Agregar tracking code al proyecto
+  - Monitorear conversiones del formulario
+- [ ] 🔍 **Google Search Console**: Para SEO y indexación
+  - Registrar sitio: https://search.google.com/search-console
+  - Verificar propiedad del dominio
+  - Enviar sitemap.xml
+  - Monitorear palabras clave y errores
+- [ ] 📱 **PWA (Progressive Web App)**: Para instalación en dispositivos
+  - Agregar manifest.json
+  - Configurar service worker
+  - Permitir instalación "Add to Home Screen"
+  - Funcionalidad offline básica
+- [ ] ⚡ **Lighthouse Audit**: Para optimización de performance
+  - Ejecutar audit en Chrome DevTools
+  - Mejorar métricas Core Web Vitals
+  - Optimizar imágenes (WebP, lazy loading)
+  - Minimizar JavaScript y CSS
+  - Configurar caching headers
 
 ---
 
