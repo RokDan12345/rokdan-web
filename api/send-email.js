@@ -45,13 +45,8 @@ export default async function handler(req, res) {
 
     // Send email using Resend
     const data = await resend.emails.send({
-      // TESTING MODE: Uses onboarding@resend.dev and sends to satfuncionalmallorca.web@gmail.com
       from: 'SatFuncional <onboarding@resend.dev>',
-      to: ['satfuncionalmallorca.web@gmail.com'],
-      
-      // PRODUCTION MODE: Uncomment ONLY after verifying domain at resend.com/domains
-      // from: 'SatFuncional <contacto@satfuncionalmallorca.com>',
-      // to: ['satfuncionalmallorca@gmail.com'],
+      to: ['satfuncionalmallorca@gmail.com'],
       subject: `Nueva solicitud de servicio: ${service}`,
       html: `
         <!DOCTYPE html>
