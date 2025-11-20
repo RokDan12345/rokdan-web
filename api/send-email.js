@@ -44,10 +44,9 @@ export default async function handler(req, res) {
     console.log('reCAPTCHA score:', recaptchaData.score);
 
     // Send email using Resend
-    // TEMPORARY: Sending to satfuncionalmallorca.web@gmail.com due to Resend sandbox mode
-    // To fix: Add payment method at https://resend.com/settings/billing
+    // Using onboarding@resend.dev as sender because custom domain sender requires payment verification
     const data = await resend.emails.send({
-      from: 'SatFuncional <noreply@send.satfuncionalmallorca.com>',
+      from: 'SatFuncional <onboarding@resend.dev>',
       to: ['satfuncionalmallorca.web@gmail.com'],
       subject: `Nueva solicitud de servicio: ${service}`,
       html: `
