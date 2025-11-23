@@ -43,12 +43,10 @@ export default async function handler(req, res) {
 
     console.log('reCAPTCHA score:', recaptchaData.score);
 
-    // Send email using Resend
-    // Using onboarding@resend.dev as sender because custom domain sender requires payment verification
+    // Send email using Resend with verified custom domain
     const data = await resend.emails.send({
-      // from: 'Formulario Web <contacto@satfuncionalmallorca.com>',
-      from: 'Formulario Web <onboarding@resend.dev>',
-      to: ['satfuncionalmallorca@gmail.com' , 'lucas.workspace.1997@gmail.com', 'satfuncionalmallorca.web@gmail.com' ],
+      from: 'Formulario Web <contacto@satfuncionalmallorca.com>',
+      to: ['satfuncionalmallorca@gmail.com', 'lucas.workspace.1997@gmail.com', 'satfuncionalmallorca.web@gmail.com'],
       reply_to: email, 
       subject: `Nueva solicitud de servicio: ${service}`,
       html: `

@@ -42,9 +42,10 @@ bun preview          # Preview production build locally
 - reCAPTCHA site key is hardcoded in code, NOT from env vars (Vite limitation for public keys)
 
 ### Testing Email Flow Locally
-1. Create `.env.local` with both keys
-2. Use `onboarding@resend.dev` as sender (no domain verification needed)
-3. Recipient is `satfuncionalmallorca.web@gmail.com` (line 50 in `api/send-email.js`)
+1. Create `.env.local` with `RESEND_API_KEY` and `RECAPTCHA_SECRET_KEY`
+2. Production sender is `contacto@satfuncionalmallorca.com` (verified domain)
+3. For testing without custom domain, temporarily use `onboarding@resend.dev`
+4. Recipients configured on line 50 in `api/send-email.js`
 
 ## Project-Specific Conventions
 
@@ -71,9 +72,9 @@ bun preview          # Preview production build locally
 
 ### Resend Email Service
 - **Free tier**: 3,000 emails/month
-- **Current sender**: `onboarding@resend.dev` (testing) - see line 48 in `api/send-email.js`
-- **Production sender**: Commented out on line 49 - requires DNS verification (see `DNS_CONFIGURATION_GUIDE.md`)
-- **Switch to custom domain**: Uncomment line 49, comment line 48 after DNS verification
+- **Production sender**: `contacto@satfuncionalmallorca.com` (DNS verified)
+- **Recipients**: Multiple recipients configured for redundancy (business Gmail + personal backup)
+- **Important**: Resend can ONLY send from `@resend.dev` or verified custom domains - never from Gmail addresses
 
 ### reCAPTCHA v3 Integration
 - **Invisible**: No user interaction required
@@ -117,8 +118,9 @@ Check:
 - `DNS_CONFIGURATION_GUIDE.md` - Resend domain verification steps
 - `RECAPTCHA_SETUP.md` - Google reCAPTCHA setup walkthrough
 
-## Migration Notes (Current State)
-- **Domain acquired**: satfuncionalmallorca.com
-- **DNS verification**: Pending (required for custom email sender)
-- **Production email**: Recipient configured, sender awaiting domain verification
-- **Accounts**: Using `satfuncionalmallorca.web@gmail.com` for services, `satfuncionalmallorca@gmail.com` for receiving contacts
+## Production Status
+- **Domain**: satfuncionalmallorca.com (acquired and DNS verified ✅)
+- **Email sending**: Fully configured with Resend
+- **Sender**: `contacto@satfuncionalmallorca.com`
+- **Recipients**: Multiple Gmail accounts for redundancy
+- **Region**: Resend hosted in Ireland (eu-west-1) - independent from Vercel region
