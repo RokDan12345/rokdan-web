@@ -120,7 +120,9 @@ Check:
 
 ## Production Status
 - **Domain**: satfuncionalmallorca.com (acquired and DNS verified ✅)
-- **Email sending**: Fully configured with Resend
+- **Email sending**: Fully configured and working with Resend ✅
 - **Sender**: `contacto@satfuncionalmallorca.com`
-- **Recipients**: Multiple Gmail accounts for redundancy
+- **Recipient**: `satfuncionalmallorca@gmail.com` (business admin account)
 - **Region**: Resend hosted in Ireland (eu-west-1) - independent from Vercel region
+- **Git Configuration**: Commits must be authored by `satfuncionalmallorca.web@gmail.com` for Vercel deployments
+- **Dual Repository Setup**: Code syncs to both personal (`LucasSA97/tech-trio-pages`) and business (`satfuncionalmallorcaweb/sat-funcional-mallorca-web`) repos
