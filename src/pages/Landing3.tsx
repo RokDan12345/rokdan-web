@@ -84,6 +84,14 @@ const Landing3 = () => {
                 <Button onClick={scrollToContact} className="bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full px-8 py-6 text-lg">
                   Pedir Cita
                 </Button>
+                <a href="https://wa.me/34632208757" target="_blank" rel="noopener noreferrer">
+                  <Button 
+                    variant="outline" 
+                    className="border-2 border-landing3-orange text-landing3-orange hover:bg-landing3-orange hover:text-white rounded-full px-8 py-6 text-lg"
+                  >
+                    WhatsApp
+                  </Button>
+                </a>
                 {/* Solo visible en mobile */}
                 <a href="tel:+34632208757" className="lg:hidden">
                   <Button 
@@ -96,8 +104,8 @@ const Landing3 = () => {
               </div>
             </div>
             <div className="bg-landing3-blueLight/30 rounded-3xl p-12 text-center">
-              <div className="text-6xl font-bold text-landing3-blueDark mb-4">500+</div>
-              <p className="text-2xl text-landing3-text mb-6">Familias Confían en Nosotros</p>
+              <div className="text-6xl font-bold text-landing3-blueDark mb-4">+15</div>
+              <p className="text-2xl text-landing3-text mb-6"> Años de experiencia trabajando con todas las marcas</p>
               <div className="flex justify-center gap-2 text-landing3-orange text-3xl">
                 ★★★★★
               </div>
@@ -362,8 +370,8 @@ const Landing3 = () => {
             </div>
             <div>
               <h4 className="font-bold text-landing3-blueDark mb-4">Horario</h4>
-              <p className="text-landing3-text/70 mb-2">Lunes a Viernes: 10:00 - 18:00</p>
-              {/* <p className="text-landing3-text/70">Sábados y Domingos: Cerrado</p> */}
+              <p className="text-landing3-text/70 mb-2">Horario de atención telefónica: 9 a 17</p>
+              <p className="text-landing3-text/70">Horario laboral: 9 a 17</p>
             </div>
           </div>
           <div className="border-t border-landing3-blueDark/10 pt-8 text-center text-landing3-text/60">

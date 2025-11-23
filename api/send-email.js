@@ -47,7 +47,7 @@ export default async function handler(req, res) {
     // Send email using Resend with verified custom domain
     const data = await resend.emails.send({
       from: 'Formulario Web <contacto@satfuncionalmallorca.com>',
-      to: ['satfuncionalmallorca@gmail.com', 'lucas.workspace.1997@gmail.com', 'satfuncionalmallorca.web@gmail.com'],
+      to: ['satfuncionalmallorca@gmail.com'],
       reply_to: email, 
       subject: `Nueva solicitud de servicio: ${service}`,
       html: `
