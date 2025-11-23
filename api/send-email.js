@@ -46,8 +46,9 @@ export default async function handler(req, res) {
     // Send email using Resend
     // Using onboarding@resend.dev as sender because custom domain sender requires payment verification
     const data = await resend.emails.send({
-      from: 'Formulario Web <contacto@satfuncionalmallorca.com>',
-      to: ['satfuncionalmallorca@gmail.com'],
+      // from: 'Formulario Web <contacto@satfuncionalmallorca.com>',
+      from: 'Formulario Web <onboarding@resend.dev>',
+      to: ['satfuncionalmallorca@gmail.com' , 'lucas.workspace.1997@gmail.com', 'satfuncionalmallorca.web@gmail.com' ],
       reply_to: email, 
       subject: `Nueva solicitud de servicio: ${service}`,
       html: `
@@ -222,7 +223,7 @@ export default async function handler(req, res) {
         </html>
       `,
     });
-
+    console.log('Email sent successfully:', data);
     return res.status(200).json({ 
       success: true, 
       data: data 
