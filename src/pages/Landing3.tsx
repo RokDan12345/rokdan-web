@@ -371,7 +371,7 @@ const Landing3 = () => {
             <div>
               <h4 className="font-bold text-landing3-blueDark mb-4">Horario</h4>
               <p className="text-landing3-text/70 mb-2">Horario de atención telefónica: 9 a 17</p>
-              <p className="text-landing3-text/70">Horario laboral: 9 a 17</p>
+              <p className="text-landing3-text/70">Horario laboral: 9 a 19</p>
             </div>
           </div>
           <div className="border-t border-landing3-blueDark/10 pt-8 text-center text-landing3-text/60">
