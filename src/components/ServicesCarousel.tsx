@@ -109,18 +109,18 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
   // Map services to their images
   const getServiceImage = (service: string) => {
     const imageMap: { [key: string]: string } = {
-      "Aires Acondicionados": "/services/aire-acondicionado.webp",
-      "Calderas a Gas y Gasoil": "/services/calderas.webp",
-      "Lavadoras": "/services/lavadoras.webp",
-      "Lavavajillas": "/services/lavavajillas.webp",
-      "Hornos": "/services/hornos.webp",
-      "Vitrocerámica": "/services/vitroceramica.webp",
-      "Inducción": "/services/induccion.webp",
-      "Cocinas a Gas": "/services/cocinas-gas.webp",
-      "Neveras": "/services/neveras.webp",
-      "Campanas Extractoras": "/services/campanas.webp",
-      "Televisores": "/services/televisores.webp",
-      "Calentadores de Agua": "/services/calentadores.webp",
+      "Aires Acondicionados": "/air-repair-2.webp", 
+      "Calderas a Gas y Gasoil": "/gas-boiler.avif",
+      "Lavadoras": "/mantenimiento-lavadora.webp",
+      "Lavavajillas": "/mantenimiento-lavavajillas.webp",
+      "Hornos": "/mantenimiento-horno.webp",
+      "Vitrocerámica": "/mantenimiento-vitro.webp",
+      "Inducción": "/mantenimiento-induccion.webp",
+      "Cocinas a Gas": "/cocina-gas.webp",
+      "Neveras": "/reparacion-de-neveras.webp",
+      "Campanas Extractoras": "/reparacion-campanas.webp",
+      "Televisores": "/tv-repair.webp",
+      "Calentadores de Agua": "/reparacion-calentador.webp",
     };
     return imageMap[service] || "/placeholder.svg";
   };
