@@ -22,8 +22,11 @@ const ContactBanner = ({ className = "" }: ContactBannerProps) => {
         <X className="w-4 h-4 text-black" />
       </button>
       <div className="text-xs sm:text-sm font-semibold mb-1">Servicio Telefónico</div>
+      <div className="text-xs sm:text-sm mb-1">
+        <a href="tel:+34606023698" className="font-bold hover:underline break-all lg:pointer-events-none lg:cursor-text">+34 606 023 698</a>
+      </div>
       <div className="text-xs sm:text-sm">
-        Llame ahora: <a href="tel:+34632208757" className="font-bold hover:underline break-all lg:pointer-events-none lg:cursor-text">+34 632 208 757</a>
+        <a href="tel:+34618794696" className="font-bold hover:underline break-all lg:pointer-events-none lg:cursor-text">+34 618 794 696</a>
       </div>
     </div>
   );

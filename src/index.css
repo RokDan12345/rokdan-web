@@ -24,13 +24,13 @@ All colors MUST be HSL.
     --landing2-bg: 50 38% 99%;
     --landing2-text: 205 86% 10%;
 
-    /* Landing 3 - Cercana y Confiable: #FAE6B1, #FFA101, #B3DEE5, #31525B */
-    --landing3-cream: 44 82% 85%;
-    --landing3-orange: 38 100% 50%;
-    --landing3-blue-light: 186 52% 80%;
-    --landing3-blue-dark: 195 46% 28%;
-    --landing3-bg: 44 82% 98%;
-    --landing3-text: 195 46% 20%;
+    /* Landing 3 - ROKDAN: #1B4079, #7F9C96, #8FAD88, #CBDF90 */
+    --landing3-cream: 73 37% 72%; /* #CBDF90 verde claro/amarillento */
+    --landing3-orange: 222 65% 29%; /* #1B4079 azul oscuro (principal) */
+    --landing3-blue-light: 160 16% 56%; /* #7F9C96 verde grisáceo */
+    --landing3-blue-dark: 222 65% 29%; /* #1B4079 azul oscuro */
+    --landing3-bg: 73 37% 95%; /* versión clara de CBDF90 para fondo */
+    --landing3-text: 222 65% 20%; /* versión oscura del azul para texto */
 
     /* Default theme colors */
     --background: 0 0% 100%;

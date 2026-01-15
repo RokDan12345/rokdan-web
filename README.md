@@ -1,14 +1,14 @@
-# SatFuncional - Página Web Corporativa
+# ROKDAN - Página Web Corporativa
 
-Página web profesional para **SatFuncional**, empresa de servicios técnicos especializados.
+Página web profesional para **ROKDAN**, empresa de servicios técnicos especializados.
 
 ---
 
 ## 📋 Estado del Proyecto
 
-**Estado actual**: ✅ Funcional en modo de prueba  
-**URL temporal**: https://tech-trio-pages.vercel.app  
-**Repositorio**: https://github.com/LucasSA97/sat-funcional-web (Privado)
+**Estado actual**: ⚙️ En desarrollo  
+**URL temporal**: https://daniel-web-project.vercel.app (pendiente deployment)  
+**Repositorio**: https://github.com/LucasSA97/daniel-web-project
 
 ---
 

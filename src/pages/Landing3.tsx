@@ -52,7 +52,7 @@ const Landing3 = () => {
           <div className="flex items-center">
             <img 
               src="/logo-navbar.webp" 
-              alt="SatFuncional Logo" 
+              alt="ROKDAN Logo" 
               className="navbar-logo" 
               width="240" 
               height="80"
@@ -84,7 +84,7 @@ const Landing3 = () => {
                 <Button onClick={scrollToContact} className="bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full px-8 py-6 text-lg">
                   Pedir Cita
                 </Button>
-                <a href="https://wa.me/34632208757" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/34618794696" target="_blank" rel="noopener noreferrer">
                   <Button 
                     variant="outline" 
                     className="border-2 border-landing3-orange text-landing3-orange hover:bg-landing3-orange hover:text-white rounded-full px-8 py-6 text-lg"
@@ -93,7 +93,7 @@ const Landing3 = () => {
                   </Button>
                 </a>
                 {/* Solo visible en mobile */}
-                <a href="tel:+34632208757" className="lg:hidden">
+                <a href="tel:+34606023698" className="lg:hidden">
                   <Button 
                     variant="outline" 
                     className="border-2 border-landing3-blueDark text-landing3-blueDark hover:bg-landing3-blueDark hover:text-white rounded-full px-8 py-6 text-lg"
@@ -359,14 +359,15 @@ const Landing3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-2xl font-bold text-landing3-blueDark mb-4">
-                Sat<span className="text-landing3-orange">Funcional</span>
+                ROK<span className="text-landing3-orange">DAN</span>
               </h3>
               <p className="text-landing3-text/70">Tu servicio técnico de confianza</p>
             </div>
             <div>
               <h4 className="font-bold text-landing3-blueDark mb-4">Contacto</h4>
-              <p className="text-landing3-text/70 mb-2"><a href="tel:+34632208757" className="lg:pointer-events-none lg:cursor-text">+34 632 208 757</a></p>
-              <p className="text-landing3-text/70">satfuncionalmallorca@gmail.com</p>
+              <p className="text-landing3-text/70 mb-2"><a href="tel:+34606023698" className="lg:pointer-events-none lg:cursor-text">+34 606 023 698</a></p>
+              <p className="text-landing3-text/70 mb-2"><a href="tel:+34618794696" className="lg:pointer-events-none lg:cursor-text">+34 618 794 696</a></p>
+              <p className="text-landing3-text/70">contacto@rokdan.com</p>
             </div>
             <div>
               <h4 className="font-bold text-landing3-blueDark mb-4">Horario</h4>
@@ -375,7 +376,7 @@ const Landing3 = () => {
             </div>
           </div>
           <div className="border-t border-landing3-blueDark/10 pt-8 text-center text-landing3-text/60">
-            © 2025 SatFuncional.
+            © 2026 ROKDAN.
           </div>
         </div>
       </footer>
