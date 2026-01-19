@@ -51,7 +51,7 @@ const Landing3 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-4 flex justify-between items-center flex-wrap gap-2">
           <div className="flex items-center">
             <img 
-              src="/logo-navbar.webp" 
+              src="/logo-navbar-.jpg" 
               alt="ROKDAN Logo" 
               className="navbar-logo" 
               width="240" 
