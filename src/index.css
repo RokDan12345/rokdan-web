@@ -26,7 +26,7 @@ All colors MUST be HSL.
 
     /* Landing 3 - ROKDAN: #1B4079, #7F9C96, #8FAD88, #CBDF90 */
     --landing3-cream: 73 37% 72%; /* #CBDF90 verde claro/amarillento */
-    --landing3-orange: 222 65% 29%; /* #1B4079 azul oscuro (principal) */
+    --landing3-orange: 30 100% 60%; /* #FF8533 naranja vibrante (color de acento) */
     --landing3-blue-light: 160 16% 56%; /* #7F9C96 verde grisáceo */
     --landing3-blue-dark: 222 65% 29%; /* #1B4079 azul oscuro */
     --landing3-bg: 73 37% 95%; /* versión clara de CBDF90 para fondo */
