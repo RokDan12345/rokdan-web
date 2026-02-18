@@ -17,52 +17,15 @@
 
 ---
 
-## 📝 INFORMACIÓN NECESARIA DEL CLIENTE
+## ✅ INFORMACIÓN DEL CLIENTE (Completado)
 
-### Datos Básicos
-- [x] **Nombre comercial completo**: ROKDAN
-- [ ] **Slogan o frase destacada**: _________________________ (usar similar a SatFuncional)
-- [ ] **Descripción del negocio** (1-2 párrafos): _________________________ (adaptar de SatFuncional)
-- [ ] **Años de experiencia**: _________________________ (preguntar)
-- [ ] **Zona geográfica de servicio**: _________________________ (preguntar)
-
-### Contacto
-- [x] **Teléfono principal**: +34 606 023 698
-- [x] **WhatsApp**: +34 618 794 696
-- [ ] **Email para recibir leads**: _________________________
-- [ ] **Dirección física** (opcional): _________________________
-- [x] **Horarios de atención**: Atención telefónica 9-17h, Horario laboral 9-19h
-
-### Servicios Ofrecidos
-Lista de servicios que aparecerán en la web (mínimo 6-12):
-
-1. [x] Aires Acondicionados
-2. [x] Calderas a Gas y Gasoil
-3. [x] Lavadoras
-4. [x] Lavavajillas
-5. [x] Hornos
-6. [x] Vitrocerámica
-7. [x] Inducción
-8. [x] Cocinas a Gas
-9. [x] Neveras
-10. [x] Campanas Extractoras
-11. [x] Televisores
-12. [x] Calentadores de Agua
-
-### Identidad Visual
-- [x] **Logo** (formato PNG/SVG, alta resolución) - ✅ RECIBIDO
-- [x] **Colores corporativos** (basados en logo):
-  - Color primario (hex): #1B4079 (azul oscuro principal)
-  - Color secundario (hex): #7F9C96 (verde grisáceo)
-  - Color acento 1 (hex): #8FAD88 (verde medio)
-  - Color acento 2 (hex): #CBDF90 (verde claro/amarillento)
-- [ ] **Fuentes** (si tiene preferencia): _________________________
-
-### Assets Multimedia
-- [ ] **Imágenes de servicios** (6-12 fotos .jpg/.png para convertir a .webp)
-- [ ] **Foto del equipo/profesional** (opcional)
-- [ ] **Foto de portada hero** (opcional)
-- [ ] **Videos** (opcional)
+- [x] Nombre comercial: ROKDAN
+- [x] Slogan y descripción del negocio
+- [x] Años de experiencia y zona de servicio
+- [x] Email para leads y contacto
+- [x] 12 servicios definidos
+- [x] Logo y colores corporativos
+- [x] Fuentes e imágenes de servicios
 
 ---
 
@@ -114,106 +77,18 @@ Lista de servicios que aparecerán en la web (mínimo 6-12):
 
 ---
 
-## 💻 DESARROLLO - Modificaciones de Código
+## ✅ DESARROLLO FRONTEND (Completado)
 
-### Frontend
+- [x] index.html - Meta tags y título actualizados
+- [x] Landing3.tsx - Nombre, teléfonos, emails, servicios
+- [x] ContactBanner.tsx - Teléfonos actualizados
+- [x] api/send-email.js - Template y datos actualizados
+- [x] tailwind.config.ts - Paleta ROKDAN configurada
+- [x] package.json - Nombre cambiado a "rokdan-web"
 
-#### `index.html`
-- [x] Actualizar `<title>`: "ROKDAN | Reparación e Instalación de Electrodomésticos"
-- [x] Actualizar `<meta name="description">` (pendiente personalizar más)
-- [x] Actualizar `<meta property="og:title">`
-- [x] Actualizar `<meta property="og:description">` (pendiente personalizar más)
-- [x] Actualizar `<meta name="author">`
-
-#### `src/pages/Landing3.tsx`
-- [x] Línea 55, 169, 359, 378: Cambiar nombre "SatFuncional" por "ROKDAN"
-- [x] Líneas 10-22: Array `services` mantenido (mismos servicios)
-- [x] Líneas 87, 96, 368: Cambiar teléfonos a +34 606 023 698 y +34 618 794 696
-- [x] Línea 87: Actualizar link WhatsApp a wa.me/34618794696
-- [x] Línea 369: Email footer cambiado a contacto@rokdan.com (placeholder)
-- [ ] Hero section: Actualizar slogan y textos principales (pendiente personalización)
-- [ ] About section: Cambiar "15 años experiencia" y descripción (pendiente info cliente)
-- [x] Footer: Textos y links actualizados con ROKDAN
-
-#### `src/components/ContactBanner.tsx`
-- [x] Ambos teléfonos agregados: +34 606 023 698 y +34 618 794 696
-
-### Backend
-
-#### `api/send-email.js`
-- [x] Línea 49: Cambiado `from: 'contacto@rokdan.com'` (placeholder)
-- [x] Línea 50: Cambiado array de destinatarios a info@rokdan.com (placeholder)
-- [x] Líneas 54-238: Template HTML actualizado:
-  - [x] Nombre empresa en footer: ROKDAN
-  - [ ] Colores corporativos inline (pendiente si queremos personalizar más)
-  - [x] Footer copyright: 2026 ROKDAN
-  - [x] Textos generales actualizados
-
-### Estilos
-
-#### `tailwind.config.ts` y `src/index.css`
-- [x] Actualizar paleta `landing3-*` con colores corporativos ROKDAN:
-  - [x] `landing3-orange` → #1B4079 (azul oscuro principal)
-  - [x] `landing3-blue-dark` → #1B4079 (azul oscuro)
-  - [x] `landing3-blue-light` → #7F9C96 (verde grisáceo)
-  - [x] `landing3-cream` → #CBDF90 (verde claro/amarillento)
-  - [x] Colores adicionales: #8FAD88 (verde medio - disponible si se necesita)
-- [ ] (Opcional) Cambiar fuentes en `fontFamily` - MANTENEMOS Poppins
-
-### Assets - `public/`
-
-#### Logos
-- [ ] Reemplazar `logo-navbar.webp`
-- [ ] Reemplazar `logo.webp`
-- [ ] Reemplazar `favicon.ico`
-
-#### Imágenes de Servicios
-- [ ] Revisar/reemplazar 13 archivos .webp/.avif:
-  - [ ] air-repair-2.webp
-  - [ ] cocina-gas.webp
-  - [ ] gas-boiler.avif
-  - [ ] mantenimiento-horno.webp
-  - [ ] mantenimiento-induccion.webp
-  - [ ] mantenimiento-lavavajillas.webp
-  - [ ] mantenimiento-nevera.webp
-  - [ ] mantenimiento-vitroceramica.webp
-  - [ ] reparacion-calentador.webp
-  - [ ] reparacion-campanas.webp
-  - [ ] reparacion-lavadora.webp
-  - [ ] reparacion-television.webp
-  - [ ] servicio-aire-acondicionado.webp
-
-**Acción**: Eliminar las no relevantes, agregar nuevas si es necesario
-
-### Configuración Local
-
-#### `.env.local`
-Crear archivo con:
-```
-RESEND_API_KEY=re_XXXXXXXXXXXXXXXXX
-RECAPTCHA_SECRET_KEY=6LeXXXXXXXXXXXXXXXXXXXXXXXX
-VITE_RECAPTCHA_SITE_KEY=6LeXXXXXXXXXXXXXXXXXXXXXXXX
-```
-
----
-
-## 🧹 LIMPIEZA - Archivos a Eliminar/Actualizar
-
-### Documentación Específica de SatFuncional (ELIMINAR)
-- [ ] `GUIA_PLATAFORMAS.md`
-- [ ] `FINAL_STEPS.md`
-- [ ] `STATUS_SUMMARY.md`
-- [ ] `DNS_CONFIGURATION_GUIDE.md` (o reescribir para Dani)
-
-### Documentación Genérica (ACTUALIZAR)
-- [ ] `README.md` - Cambiar nombre proyecto y detalles
-- [ ] `RECAPTCHA_SETUP.md` - Actualizar dominio
-- [ ] `EMAIL_SETUP.md` - Actualizar credenciales
-- [ ] `IMPLEMENTACION_EMAILS.md` - Verificar referencias
-
-### Otros
-- [ ] `.gitignore` - Verificar que `.env.local` está ignorado ✅
-- [x] `package.json` - Campo `name` cambiado a "rokdan-web"
+### Assets pendientes (opcional)
+- [ ] Reemplazar logos y favicon
+- [ ] Revisar imágenes de servicios
 
 ---
 
