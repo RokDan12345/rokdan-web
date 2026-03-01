@@ -32,13 +32,13 @@
 ## 🔧 CONFIGURACIÓN TÉCNICA REQUERIDA
 
 ### Cuentas de Email (Gmail)
-- [ ] **Crear cuenta servicios**: `[nombre-dani].web@gmail.com`
-  - Usuario: _________________________
+- [x] **Crear cuenta servicios**: `rokdan.web@gmail.com`
+  - Usuario: rokdan.web@gmail.com
   - Contraseña: _________________________ (guardar en gestor)
   - Uso: GitHub, Vercel, Resend, reCAPTCHA
   
-- [ ] **Cuenta destino leads**: _________________________
-  - (Puede ser email existente del cliente o crear nueva)
+- [x] **Cuenta destino leads**: `rokdan.servicios@gmail.com`
+  - Email configurado en api/send-email.js
 
 ### Dominio
 - [ ] **Dominio a usar**: _________________________
@@ -51,29 +51,29 @@
 ### Servicios Externos
 
 #### 1. Resend (Email)
-- [ ] Crear cuenta en https://resend.com con email de servicios
-- [ ] Generar API Key
-- [ ] Agregar dominio del cliente
+- [x] Crear cuenta en https://resend.com con email de servicios
+- [x] Generar API Key
+- [ ] Agregar dominio rokdan.com
 - [ ] Configurar DNS (SPF, DKIM, DMARC)
 - [ ] Esperar verificación (5 min - 48 hrs)
-- [ ] **API Key generada**: _________________________ (guardar seguro)
+- [x] **API Key generada**: re_2DGS9eQG_3yfZugm8iVpqNHVuGMZhMvao (guardar seguro)
 
 #### 2. Google reCAPTCHA v3
-- [ ] Ir a https://www.google.com/recaptcha/admin/create
-- [ ] Registrar dominio del cliente
-- [ ] Tipo: reCAPTCHA v3
-- [ ] Dominios permitidos: `[dominio-cliente.com]`
-- [ ] **Site Key**: _________________________ (guardar)
-- [ ] **Secret Key**: _________________________ (guardar seguro)
+- [x] Ir a https://www.google.com/recaptcha/admin/create
+- [x] Registrar dominio del cliente
+- [x] Tipo: reCAPTCHA v3
+- [x] Dominios permitidos: `rokdan-web.vercel.app`, `localhost`
+- [x] **Site Key**: 6Lf6zXgsAAAAAAeAK-OoI4OEm6gKvLSVMxjLz_Hk (guardar)
+- [x] **Secret Key**: 6Lf6zXgsAAAAAGQkX3EFMih-_MThZQGUVnq5uIj0 (guardar seguro)
 
 #### 3. Vercel
-- [ ] Crear nuevo proyecto en Vercel
-- [ ] Conectar repositorio `daniel-web-project`
-- [ ] Conectar dominio
-- [ ] Configurar variables de entorno:
-  - [ ] `RESEND_API_KEY`
-  - [ ] `RECAPTCHA_SECRET_KEY`
-  - [ ] `VITE_RECAPTCHA_SITE_KEY`
+- [x] Crear nuevo proyecto en Vercel
+- [x] Conectar repositorio `daniel-web-project`
+- [x] Conectar dominio (https://rokdan-web.vercel.app)
+- [x] Configurar variables de entorno:
+  - [x] `RESEND_API_KEY`
+  - [x] `RECAPTCHA_SECRET_KEY`
+  - [x] `VITE_RECAPTCHA_SITE_KEY`
 
 ---
 

@@ -5,9 +5,21 @@ import ContactBanner from "@/components/ContactBanner";
 import ServicesCarousel from "@/components/ServicesCarousel";
 import ContactForm from "@/components/ContactForm";
 import { useState } from "react";
+import { Home, Paintbrush, Zap, Droplets, Sun, Waves, FileText, Clock, Key, ShieldCheck } from "lucide-react";
 
 const Landing3 = () => {
   const services = [
+    { name: "Reformas Integrales", icon: Home, description: "Cocinas, Baños y Cambio de suelos" },
+    { name: "Acabados", icon: Paintbrush, description: "Quitar gotelé y pintura profesional" },
+    { name: "Electricidad", icon: Zap, description: "Instalaciones eléctricas completas" },
+    { name: "Fontanería", icon: Droplets, description: "Sistemas de agua y saneamiento" },
+    { name: "Placas Solares", icon: Sun, description: "Energía renovable para tu hogar" },
+    { name: "Piscinas", icon: Waves, description: "Mantenimiento y reparación" },
+    { name: "Informes de Arquitectura", icon: FileText, description: "Modificaciones estructurales" },
+  ];
+
+  // Mantener array de nombres para el carrusel existente
+  const carouselServices = [
     "Aires Acondicionados",
     "Calderas a Gas y Gasoil",
     "Lavadoras",
@@ -73,16 +85,16 @@ const Landing3 = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-landing3-blueDark mb-6 leading-tight break-words">
-                Reparamos tu hogar con
-                <span className="text-landing3-orange"> confianza</span>
+                Reformas Generales: Creamos tu hogar
+                <span className="text-landing3-orange"> desde cero</span>
               </h1>
               <p className="text-xl text-landing3-text/80 mb-8 leading-relaxed">
-                Somos tu servicio técnico de confianza. Reparamos e instalamos todo tipo 
-                de electrodomésticos con rapidez y garantía total.
+                Expertos en reformas integrales y reacondicionado de locales. 
+                Nos encargamos de todo para que tú no te preocupes por nada.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button onClick={scrollToContact} className="bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full px-8 py-6 text-lg">
-                  Pedir Cita
+                  Presupuesto sin compromiso
                 </Button>
                 <a href="https://wa.me/34618794696" target="_blank" rel="noopener noreferrer">
                   <Button 
@@ -104,8 +116,8 @@ const Landing3 = () => {
               </div>
             </div>
             <div className="bg-landing3-blueLight/30 rounded-3xl p-12 text-center">
-              <div className="text-6xl font-bold text-landing3-blueDark mb-4">+15</div>
-              <p className="text-2xl text-landing3-text mb-6"> Años de experiencia trabajando con todas las marcas</p>
+              <div className="text-6xl font-bold text-landing3-blueDark mb-4">+200</div>
+              <p className="text-2xl text-landing3-text mb-6">Proyectos completados con la máxima satisfacción</p>
               <div className="flex justify-center gap-2 text-landing3-orange text-3xl">
                 ★★★★★
               </div>
@@ -119,31 +131,37 @@ const Landing3 = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-landing3-blueDark mb-4">
-              ¿Qué reparamos?
+              Nuestros Servicios
             </h2>
             <p className="text-lg text-landing3-text/70">
-              Expertos en todo tipo de electrodomésticos
+              Expertos en todo tipo de reformas y construcción
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                onClick={() => handleServiceClick(index)}
-                className="group bg-landing3-bg rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-landing3-orange"
-              >
-                <h3 className="text-xl font-bold text-landing3-blueDark mb-2 group-hover:text-landing3-orange transition-colors">
-                  {service}
-                </h3>
-                <p className="text-landing3-text/60">Servicio rápido y garantizado</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <div
+                  key={index}
+                  onClick={() => handleServiceClick(index)}
+                  className="group bg-landing3-bg rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-landing3-orange"
+                >
+                  <div className="w-14 h-14 bg-landing3-orange/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-landing3-orange/20 transition-colors">
+                    <IconComponent className="w-7 h-7 text-landing3-orange" />
+                  </div>
+                  <h3 className="text-xl font-bold text-landing3-blueDark mb-2 group-hover:text-landing3-orange transition-colors">
+                    {service.name}
+                  </h3>
+                  <p className="text-landing3-text/60">{service.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Services Carousel */}
-      <ServicesCarousel services={services} accentColor="orange" className="bg-landing3-bg" />
+      <ServicesCarousel services={carouselServices} accentColor="orange" className="bg-landing3-bg" />
 
       {/* Detailed Services Section with Accordion */}
       <section id="servicios-detallados" className="py-20 px-4 sm:px-6 lg:px-12 bg-white">
@@ -166,121 +184,87 @@ const Landing3 = () => {
           >
             <AccordionItem value="item-1" data-accordion-value="item-1" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
               <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
-                Aires Acondicionados
+                Reformas Integrales
               </AccordionTrigger>
               <AccordionContent className="text-landing3-text/70 leading-relaxed">
-                Instalación, mantenimiento y reparación de equipos de aire acondicionado. Trabajamos con todas las marcas y modelos, 
-                ofreciendo un servicio rápido y eficiente para mantener tu hogar a la temperatura perfecta durante todo el año.
+                Transformamos completamente tu hogar con reformas integrales de cocinas, baños y cambio de suelos. 
+                Nos encargamos de todo el proceso: desde el diseño inicial hasta los últimos acabados. Trabajamos con 
+                materiales de primera calidad y nuestro equipo de profesionales garantiza resultados impecables. 
+                Ya sea una renovación completa o una reforma parcial, adaptamos cada proyecto a tus necesidades y presupuesto.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-2" data-accordion-value="item-2" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
               <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
-                Calderas a Gas y Gasoil
+                Acabados
               </AccordionTrigger>
               <AccordionContent className="text-landing3-text/70 leading-relaxed">
-                Especialistas en calderas de gas y gasoil. Realizamos instalaciones, mantenimientos preventivos y reparaciones urgentes. 
-                Garantizamos la seguridad y eficiencia de tu sistema de calefacción con técnicos certificados.
+                Especialistas en acabados de alta calidad. Eliminamos el gotelé de tus paredes dejándolas perfectamente 
+                lisas y listas para pintar. Ofrecemos servicios de pintura profesional con técnicas modernas y pinturas 
+                de primera calidad que garantizan durabilidad y un acabado perfecto. También realizamos trabajos de 
+                alisado, estucado y efectos decorativos para darle un toque único a cada estancia.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3" data-accordion-value="item-3" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
               <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
-                Lavadoras
+                Electricidad
               </AccordionTrigger>
               <AccordionContent className="text-landing3-text/70 leading-relaxed">
-                Reparación y mantenimiento de lavadoras de todas las marcas. Solucionamos problemas de carga, centrifugado, 
-                fugas de agua y cualquier avería. Repuestos originales y garantía en todas nuestras reparaciones.
+                Instalaciones eléctricas completas realizadas por electricistas certificados. Actualizamos cuadros 
+                eléctricos, instalamos nuevos puntos de luz y enchufes, y realizamos el cableado completo de viviendas 
+                y locales. Cumplimos con toda la normativa vigente y emitimos los certificados de instalación eléctrica 
+                (CIE) necesarios. También nos especializamos en iluminación LED y sistemas de domótica.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4" data-accordion-value="item-4" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
               <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
-                Lavavajillas
+                Fontanería
               </AccordionTrigger>
               <AccordionContent className="text-landing3-text/70 leading-relaxed">
-                Servicio técnico especializado en lavavajillas. Reparamos problemas de desagüe, limpieza deficiente, 
-                fallos en el sistema de secado y cualquier otra avería. Diagnóstico gratuito.
+                Servicios completos de fontanería para reformas y obra nueva. Instalamos y renovamos sistemas de 
+                agua fría y caliente, saneamiento, desagües y bajantes. Trabajamos con materiales de calidad como 
+                tuberías de cobre, PEX y multicapa. Solucionamos problemas de humedades, fugas y atascos. También 
+                instalamos sistemas de riego, calentadores y calderas con la máxima eficiencia energética.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-5" data-accordion-value="item-5" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
               <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
-                Hornos
+                Placas Solares
               </AccordionTrigger>
               <AccordionContent className="text-landing3-text/70 leading-relaxed">
-                Reparación de hornos eléctricos y a gas. Solucionamos problemas de temperatura, resistencias, termostatos 
-                y cualquier componente. Servicio rápido para que vuelvas a disfrutar de tus comidas caseras.
+                Instalación de sistemas de energía solar fotovoltaica para autoconsumo. Te ayudamos a reducir tu 
+                factura eléctrica hasta un 70% con paneles solares de última generación. Realizamos el estudio 
+                personalizado de tu vivienda, gestionamos las subvenciones disponibles y nos encargamos de toda 
+                la tramitación administrativa. Instalamos sistemas con o sin baterías, adaptados a tus necesidades 
+                de consumo energético.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-6" data-accordion-value="item-6" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
               <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
-                Vitrocerámica
+                Piscinas
               </AccordionTrigger>
               <AccordionContent className="text-landing3-text/70 leading-relaxed">
-                Especialistas en placas vitrocerámicas. Reparamos zonas de cocción defectuosas, problemas eléctricos 
-                y cambio de componentes. Trabajamos con todas las marcas del mercado.
+                Mantenimiento integral y reparación de piscinas. Ofrecemos servicios de limpieza periódica, tratamiento 
+                del agua, revisión de sistemas de filtración y reparación de averías. Renovamos revestimientos, 
+                reparamos fugas y grietas, e instalamos sistemas de climatización para disfrutar de tu piscina 
+                todo el año. También construimos piscinas nuevas adaptadas a tu espacio y presupuesto.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-7" data-accordion-value="item-7" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
               <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
-                Inducción
+                Informes de Arquitectura
               </AccordionTrigger>
               <AccordionContent className="text-landing3-text/70 leading-relaxed">
-                Servicio técnico para placas de inducción. Reparamos fallos electrónicos, problemas de detección de recipientes 
-                y cualquier avería. Técnicos especializados en la última tecnología de cocción.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-8" data-accordion-value="item-8" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
-              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
-                Cocinas a Gas
-              </AccordionTrigger>
-              <AccordionContent className="text-landing3-text/70 leading-relaxed">
-                Instalación y reparación de cocinas a gas. Revisión de quemadores, válvulas de seguridad y sistemas de encendido. 
-                Certificamos todas nuestras instalaciones según normativa vigente.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-9" data-accordion-value="item-9" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
-              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
-                Neveras
-              </AccordionTrigger>
-              <AccordionContent className="text-landing3-text/70 leading-relaxed">
-                Reparación de frigoríficos y congeladores. Solucionamos problemas de temperatura, fugas de gas refrigerante, 
-                fallos en el compresor y cualquier avería. Atención urgente para evitar pérdida de alimentos.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-10" data-accordion-value="item-10" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
-              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
-                Campanas Extractoras
-              </AccordionTrigger>
-              <AccordionContent className="text-landing3-text/70 leading-relaxed">
-                Instalación y reparación de campanas extractoras. Solucionamos problemas de extracción, ruidos excesivos, 
-                sistemas de filtrado y motores. Mantenimiento preventivo para garantizar un ambiente limpio en tu cocina.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-11" data-accordion-value="item-11" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
-              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
-                Televisores
-              </AccordionTrigger>
-              <AccordionContent className="text-landing3-text/70 leading-relaxed">
-                Reparación de televisores LED, LCD y Smart TV. Solucionamos problemas de imagen, sonido, conectividad 
-                y componentes internos. Diagnóstico profesional y repuestos de calidad.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-12" data-accordion-value="item-12" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
-              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
-                Calentadores de Agua
-              </AccordionTrigger>
-              <AccordionContent className="text-landing3-text/70 leading-relaxed">
-                Instalación, mantenimiento y reparación de calentadores eléctricos y a gas. Solucionamos problemas de 
-                temperatura, fugas, termostatos y resistencias. Servicio urgente para recuperar el agua caliente.
+                Elaboramos informes técnicos de arquitectura para modificaciones estructurales. Nuestro equipo de 
+                arquitectos e ingenieros realiza estudios de viabilidad, proyectos de reforma, certificados de 
+                habitabilidad y cédulas de segunda ocupación. Gestionamos licencias de obra y nos aseguramos de que 
+                tu proyecto cumpla con toda la normativa urbanística. Imprescindible para derribos de tabiques, 
+                apertura de huecos o cambios en la distribución de tu vivienda.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -301,35 +285,35 @@ const Landing3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 text-center hover-lift">
               <div className="w-16 h-16 bg-landing3-orange/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <div className="w-8 h-8 bg-landing3-orange rounded-full"></div>
+                <Clock className="w-8 h-8 text-landing3-orange" />
               </div>
               <h3 className="text-2xl font-bold text-landing3-blueDark mb-4">
-                Rapidez
+                Rapidez y Eficiencia
               </h3>
               <p className="text-landing3-text/70 leading-relaxed">
-                Respondemos en menos de 2 horas y nos desplazamos el mismo día
+                Cumplimos plazos. Tu reforma lista cuando lo prometemos, sin retrasos ni excusas.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 text-center hover-lift">
               <div className="w-16 h-16 bg-landing3-orange/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <div className="w-8 h-8 bg-landing3-orange rounded-full"></div>
+                <Key className="w-8 h-8 text-landing3-orange" />
               </div>
               <h3 className="text-2xl font-bold text-landing3-blueDark mb-4">
-                Garantía
+                Llave en mano
               </h3>
               <p className="text-landing3-text/70 leading-relaxed">
-                Todas nuestras reparaciones incluyen garantía de 12 meses
+                Nosotros nos encargamos de todo. Desde el diseño hasta la entrega final, tú solo disfruta del resultado.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 text-center hover-lift">
               <div className="w-16 h-16 bg-landing3-orange/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <div className="w-8 h-8 bg-landing3-orange rounded-full"></div>
+                <ShieldCheck className="w-8 h-8 text-landing3-orange" />
               </div>
               <h3 className="text-2xl font-bold text-landing3-blueDark mb-4">
-                Profesionales
+                Sin preocupaciones
               </h3>
               <p className="text-landing3-text/70 leading-relaxed">
-                Técnicos certificados con más de 10 años de experiencia
+                Garantía total en todos nuestros trabajos. Sin molestias ni sorpresas para el cliente.
               </p>
             </div>
           </div>
@@ -361,7 +345,7 @@ const Landing3 = () => {
               <h3 className="text-2xl font-bold text-landing3-blueDark mb-4">
                 ROK<span className="text-landing3-orange">DAN</span>
               </h3>
-              <p className="text-landing3-text/70">Tu servicio técnico de confianza</p>
+              <p className="text-landing3-text/70">Tu empresa de reformas de confianza</p>
             </div>
             <div>
               <h4 className="font-bold text-landing3-blueDark mb-4">Contacto</h4>
@@ -376,7 +360,7 @@ const Landing3 = () => {
             </div>
           </div>
           <div className="border-t border-landing3-blueDark/10 pt-8 text-center text-landing3-text/60">
-            © 2026 ROKDAN.
+            © 2026 ROKDAN. Reformas y Construcción.
           </div>
         </div>
       </footer>

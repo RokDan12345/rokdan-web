@@ -46,8 +46,8 @@ export default async function handler(req, res) {
 
     // Send email using Resend with verified custom domain
     const data = await resend.emails.send({
-      from: 'Formulario Web <contacto@rokdan.com>',
-      to: ['info@rokdan.com'],
+      from: 'Formulario Web ROKDAN <onboarding@resend.dev>',
+      to: ['rokdan.servicios@gmail.com'],
       reply_to: email, 
       subject: `Nueva solicitud de servicio: ${service}`,
       html: `
@@ -176,7 +176,7 @@ export default async function handler(req, res) {
             <div class="container">
               <div class="header">
                 <h1>Nueva Solicitud de Servicio</h1>
-                <p>SatFuncional - Servicio Técnico</p>
+                <p>ROKDAN - Servicio Técnico</p>
               </div>
               
               <div class="content">
