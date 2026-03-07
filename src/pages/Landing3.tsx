@@ -351,7 +351,7 @@ const Landing3 = () => {
               <h4 className="font-bold text-landing3-blueDark mb-4">Contacto</h4>
               <p className="text-landing3-text/70 mb-2"><a href="tel:+34606023698" className="lg:pointer-events-none lg:cursor-text">+34 606 023 698</a></p>
               <p className="text-landing3-text/70 mb-2"><a href="tel:+34618794696" className="lg:pointer-events-none lg:cursor-text">+34 618 794 696</a></p>
-              <p className="text-landing3-text/70">contacto@rokdan.com</p>
+              <p className="text-landing3-text/70">rokdan.servicios@gmail.com</p>
             </div>
             <div>
               <h4 className="font-bold text-landing3-blueDark mb-4">Horario</h4>
