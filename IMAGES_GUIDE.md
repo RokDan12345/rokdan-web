@@ -151,7 +151,7 @@ Ve a http://localhost:5173 y prueba el carousel
 
 ### ✅ **Buenas prácticas**:
 - **Alta resolución** (mínimo 800px de ancho)
-- **Enfoque claro** en el electrodoméstico
+- **Enfoque claro** en el servicio
 - **Bien iluminadas** (evitar fotos oscuras)
 - **Profesionales** (evitar fotos caseras de baja calidad)
 - **Ángulos atractivos** (perspectiva interesante)

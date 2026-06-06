@@ -5,7 +5,7 @@ import ContactBanner from "@/components/ContactBanner";
 import ServicesCarousel from "@/components/ServicesCarousel";
 import ContactForm from "@/components/ContactForm";
 import { useState } from "react";
-import { Home, Paintbrush, Zap, Droplets, Sun, Waves, FileText, Clock, Key, ShieldCheck } from "lucide-react";
+import { Home, Paintbrush, Zap, Droplets, Sun, Waves, FileText, Clock, Key, ShieldCheck, Wind, Hammer, HardHat, Umbrella, KeyRound } from "lucide-react";
 
 const Landing3 = () => {
   const services = [
@@ -16,23 +16,14 @@ const Landing3 = () => {
     { name: "Placas Solares", icon: Sun, description: "Energía renovable para tu hogar" },
     { name: "Piscinas", icon: Waves, description: "Mantenimiento y reparación" },
     { name: "Informes de Arquitectura", icon: FileText, description: "Modificaciones estructurales" },
+    { name: "Climatización", icon: Wind, description: "Aire acondicionado y calefacción" },
+    { name: "Carpintería", icon: Hammer, description: "Muebles a medida y puertas" },
+    { name: "Albañilería", icon: HardHat, description: "Obra civil y construcción" },
+    { name: "Tejados e Impermeabilización", icon: Umbrella, description: "Cubiertas y filtraciones" },
+    { name: "Cerrajería", icon: KeyRound, description: "Cerraduras y puertas de seguridad" },
   ];
 
-  // Mantener array de nombres para el carrusel existente
-  const carouselServices = [
-    "Aires Acondicionados",
-    "Calderas a Gas y Gasoil",
-    "Lavadoras",
-    "Lavavajillas",
-    "Hornos",
-    "Vitrocerámica",
-    "Inducción",
-    "Cocinas a Gas",
-    "Neveras",
-    "Campanas Extractoras",
-    "Televisores",
-    "Calentadores de Agua",
-  ];
+  const carouselServices = services.map((s) => s.name);
 
   const [openAccordionItem, setOpenAccordionItem] = useState<string>("");
 
@@ -57,9 +48,9 @@ const Landing3 = () => {
   };
 
   return (
-    <div className="min-h-screen bg-landing3-bg font-poppins overflow-x-hidden">
+    <div className="min-h-screen bg-landing3-bg font-poppins">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm">
+      <nav className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-4 flex justify-between items-center flex-wrap gap-2">
           <div className="flex items-center">
             <img 
@@ -267,6 +258,71 @@ const Landing3 = () => {
                 apertura de huecos o cambios en la distribución de tu vivienda.
               </AccordionContent>
             </AccordionItem>
+
+            <AccordionItem value="item-8" data-accordion-value="item-8" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                Climatización
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                Instalación, mantenimiento y reparación de sistemas de climatización. Trabajamos con aires 
+                acondicionados split, multisplit, conductos y bombas de calor, así como sistemas de calefacción 
+                por radiadores, suelo radiante y calderas. Realizamos cargas de gas, limpieza de filtros, 
+                desinfección de conductos y optimización del rendimiento energético. Te asesoramos sobre la 
+                mejor solución para mantener tu hogar a la temperatura ideal todo el año.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-9" data-accordion-value="item-9" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                Carpintería
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                Trabajos de carpintería a medida para tu hogar o negocio. Fabricamos e instalamos muebles 
+                empotrados, armarios roperos, estanterías, puertas interiores y frentes de armario. Trabajamos 
+                con madera maciza, melamina, lacados y laminados de alta calidad. También nos encargamos de la 
+                instalación de puertas de entrada blindadas, tarima flotante, frisos y todo tipo de revestimientos 
+                de madera. Cada pieza se adapta a las medidas y necesidades de tu espacio.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-10" data-accordion-value="item-10" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                Albañilería
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                Servicios completos de albañilería y obra civil. Realizamos tabiquería, levantado de muros, 
+                enfoscados, enlucidos y soleras. Nos encargamos de derribos, apertura de rozas, instalación de 
+                mochetas y dinteles, así como de la ejecución de morteros autonivelantes. Contamos con 
+                profesionales con amplia experiencia tanto en obra nueva como en rehabilitación de viviendas 
+                y locales comerciales. Trabajamos siempre cumpliendo los plazos y dejando la obra limpia.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-11" data-accordion-value="item-11" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                Tejados e Impermeabilización
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                Reparación y construcción de tejados, cubiertas y azoteas. Solucionamos filtraciones, goteras 
+                y humedades por condensación o capilaridad. Trabajamos con teja árabe, teja plana, pizarra, 
+                panel sándwich y láminas asfálticas. Aplicamos tratamientos impermeabilizantes en terrazas, 
+                balcones, patios de luces y cubiertas planas. Revisamos canalones, bajantes y limas para 
+                garantizar un correcto drenaje del agua y evitar filtraciones en el futuro.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-12" data-accordion-value="item-12" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                Cerrajería
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                Servicios de cerrajería para viviendas, comunidades y locales comerciales. Apertura de puertas 
+                sin rotura, cambio de cerraduras, instalación de bombines de seguridad y cilindros antibumping. 
+                Montaje de puertas acorazadas, cierres metálicos, persianas de seguridad y rejas fijas o 
+                extensibles. Trabajamos con las principales marcas del sector y asesoramos sobre el nivel de 
+                seguridad más adecuado para cada caso. Servicio de urgencias disponible las 24 horas.
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </section>
@@ -329,7 +385,7 @@ const Landing3 = () => {
                 ¿Necesitas ayuda?
               </h2>
               <p className="text-xl text-white/80">
-                Rellena el formulario y te llamamos en menos de 1 hora
+                Rellena el formulario y te llamamos
               </p>
             </div>
             <ContactForm />

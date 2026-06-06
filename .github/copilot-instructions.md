@@ -1,8 +1,8 @@
-# SatFuncional - AI Coding Agent Instructions
+# ROKDAN - AI Coding Agent Instructions
 
 ## Project Overview
 **Tech stack**: React 18 + TypeScript + Vite 5, deployed to Vercel with serverless functions.
-**Purpose**: Corporate website for SatFuncional (appliance repair service) with contact form and email integration.
+**Purpose**: Corporate website for ROKDAN (gestión de servicios y reformas) with contact form and email integration.
 **UI library**: shadcn/ui (Radix UI primitives + Tailwind CSS) with custom color scheme.
 
 ## Architecture
@@ -43,7 +43,7 @@ bun preview          # Preview production build locally
 
 ### Testing Email Flow Locally
 1. Create `.env.local` with `RESEND_API_KEY` and `RECAPTCHA_SECRET_KEY`
-2. Production sender is `contacto@satfuncionalmallorca.com` (verified domain)
+2. Production sender is configured in `api/send-email.js`
 3. For testing without custom domain, temporarily use `onboarding@resend.dev`
 4. Recipients configured on line 50 in `api/send-email.js`
 
@@ -72,8 +72,8 @@ bun preview          # Preview production build locally
 
 ### Resend Email Service
 - **Free tier**: 3,000 emails/month
-- **Production sender**: `contacto@satfuncionalmallorca.com` (DNS verified)
-- **Recipients**: Multiple recipients configured for redundancy (business Gmail + personal backup)
+- **Production sender**: Configured in `api/send-email.js` (domain setup pending)
+- **Recipients**: `rokdan.servicios@gmail.com` (configured in `api/send-email.js`)
 - **Important**: Resend can ONLY send from `@resend.dev` or verified custom domains - never from Gmail addresses
 
 ### reCAPTCHA v3 Integration
@@ -119,10 +119,10 @@ Check:
 - `RECAPTCHA_SETUP.md` - Google reCAPTCHA setup walkthrough
 
 ## Production Status
-- **Domain**: satfuncionalmallorca.com (acquired and DNS verified ✅)
-- **Email sending**: Fully configured and working with Resend ✅
-- **Sender**: `contacto@satfuncionalmallorca.com`
-- **Recipient**: `satfuncionalmallorca@gmail.com` (business admin account)
+- **Domain**: Not yet configured (pending purchase)
+- **Email sending**: Configured with Resend (domain verification pending)
+- **Sender**: Configured in `api/send-email.js`
+- **Recipient**: `rokdan.servicios@gmail.com`
 - **Region**: Resend hosted in Ireland (eu-west-1) - independent from Vercel region
-- **Git Configuration**: Commits must be authored by `satfuncionalmallorca.web@gmail.com` for Vercel deployments
-- **Dual Repository Setup**: Code syncs to both personal (`LucasSA97/tech-trio-pages`) and business (`satfuncionalmallorcaweb/sat-funcional-mallorca-web`) repos
+- **Git Configuration**: Commits must be authored by `rokdan.web@gmail.com` for Vercel deployments
+- **Repository**: `LucasSA97/tech-trio-pages`

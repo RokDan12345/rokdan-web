@@ -154,7 +154,7 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
           type="submit"
           variant="ghost"
           disabled={status === "loading"}
-          className="w-full bg-landing3-orange hover:bg-landing3-orange/90 text-white rounded-full py-6 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-landing3-orange hover:bg-landing3-orange/90 text-white hover:text-white rounded-full py-6 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === "loading" ? (
             <>

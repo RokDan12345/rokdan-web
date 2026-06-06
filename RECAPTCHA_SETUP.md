@@ -20,14 +20,14 @@ Protege tu formulario de contacto contra:
 
 2. **Rellenar el formulario**:
    ```
-   Label: SatFuncional Mallorca
-   
-   reCAPTCHA type: 
-   ✅ reCAPTCHA v3 (recomendado - invisible, no molesta al usuario)
-   
-   Domains:
-   - satfuncionalmallorca.com
-   - localhost (para desarrollo)
+    Label: ROKDAN Mallorca
+    
+    reCAPTCHA type: 
+    ✅ reCAPTCHA v3 (recomendado - invisible, no molesta al usuario)
+    
+    Domains:
+    - rokdan-web.vercel.app
+    - localhost (para desarrollo)
    
    ✅ Accept the reCAPTCHA Terms of Service
    
@@ -148,7 +148,7 @@ npm run dev
 
 ### Producción
 ```bash
-# Debe estar desplegado en satfuncionalmallorca.com
+# Debe estar desplegado en rokdan-web.vercel.app
 # O en el dominio que hayas registrado en reCAPTCHA
 ```
 
@@ -158,7 +158,7 @@ npm run dev
 
 ### Ver estadísticas de reCAPTCHA:
 1. Ir a https://www.google.com/recaptcha/admin
-2. Seleccionar tu sitio "SatFuncional Mallorca"
+ 2. Seleccionar tu sitio "ROKDAN Mallorca"
 3. Ver métricas:
    - Requests totales
    - Score promedio

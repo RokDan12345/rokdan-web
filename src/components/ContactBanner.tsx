@@ -12,7 +12,7 @@ const ContactBanner = ({ className = "" }: ContactBannerProps) => {
 
   return (
     <div 
-      className={`fixed bottom-20 sm:top-20 sm:bottom-auto right-2 sm:right-4 md:right-6 z-40 w-[260px] sm:max-w-sm shadow-lg rounded-lg p-3 sm:p-4 animate-in slide-in-from-right duration-500 ${className}`}
+      className={`fixed bottom-20 sm:top-28 sm:bottom-auto right-2 sm:right-4 md:right-6 z-40 w-[260px] sm:max-w-sm shadow-lg rounded-lg p-3 sm:p-4 animate-in slide-in-from-right duration-500 ${className}`}
     >
       <button
         onClick={() => setIsVisible(false)}

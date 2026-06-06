@@ -7,8 +7,8 @@ Página web profesional para **ROKDAN**, empresa de servicios técnicos especial
 ## 📋 Estado del Proyecto
 
 **Estado actual**: ⚙️ En desarrollo  
-**URL temporal**: https://daniel-web-project.vercel.app (pendiente deployment)  
-**Repositorio**: https://github.com/LucasSA97/daniel-web-project
+**URL temporal**: https://rokdan-web.vercel.app  
+**Repositorio**: https://github.com/LucasSA97/tech-trio-pages
 
 ---
 
@@ -43,40 +43,25 @@ Página web profesional para **ROKDAN**, empresa de servicios técnicos especial
 
 ### 🔴 **Prioridad Alta - Configuración de Producción**
 
-- [x] **1. Comprar dominio**
-  - ✅ Dominio adquirido: **satfuncionalmallorca.com**
+- [ ] **1. Comprar dominio**
+  - Dominio pendiente de adquisición
 
 - [ ] **2. Configurar Resend con el dominio nuevo**
-- [ ] **2. Configurar Resend con el dominio nuevo**
-  - ✅ Cuenta creada en Resend con `satfuncionalmallorca.web@gmail.com`
-  - ✅ API Key generada: `satfuncional-production` → `re_LZMrSVfG_BQ66dVrzdkx7QBW9TvEKFXzC`
-  - [ ] Agregar dominio en https://resend.com/domains → **satfuncionalmallorca.com**
-  - [ ] Configurar registros DNS (ver sección "Configuración DNS" abajo)
-  - [ ] Esperar verificación del dominio (puede tomar hasta 48 horas)
-  - [ ] Una vez verificado, descomentar línea 49 en `api/send-email.js`
-  - ⚠️ **NOTA**: Resend gestiona el email automáticamente. El remitente será `@satfuncionalmallorca.com` (no necesitas crear el email)
+  - ✅ Cuenta creada en Resend con `rokdan.web@gmail.com`
+  - ✅ API Key generada
+  - [ ] Agregar dominio en https://resend.com/domains
+  - [ ] Configurar registros DNS
+  - [ ] Esperar verificación del dominio
+  - ⚠️ **NOTA**: Resend gestiona el email automáticamente
 
-- [ ] **3. Emails del proyecto - ACLARACIÓN IMPORTANTE**
-  - ✅ **Cuenta de servicios**: `satfuncionalmallorca.web@gmail.com`
-    - Para: GitHub, Vercel, Resend (cuentas de servicios)
+- [ ] **3. Emails del proyecto**
+  - ✅ **Cuenta de servicios**: `rokdan.web@gmail.com`
+    - Para: GitHub, Vercel, Resend
     - NO recibe emails del formulario
-  - ✅ **Cuenta de administración**: `satfuncionalmallorca@gmail.com`
+  - ✅ **Cuenta destino leads**: `rokdan.servicios@gmail.com`
     - Para: Recibir emails del formulario de contacto
-    - Ya configurada en `api/send-email.js` línea 50
-  - **Remitente**: Una vez DNS verificado → `contacto@satfuncionalmallorca.com` (Resend lo gestiona)
-
-- [ ] **4. Crear cuenta GitHub con el email del proyecto**
-  - ✅ Cuenta creada con `satfuncionalmallorca.web@gmail.com`
-  - [ ] Habilitar 2FA (autenticación de dos factores)
-
-- [ ] **5. Crear cuenta Vercel con GitHub de empresa**
-  - Registrarse en Vercel usando la cuenta GitHub de empresa
-  - Conectar cuenta GitHub
-  - Plan gratuito es suficiente para empezar
-
-- [ ] **6. Migrar proyecto de cuenta personal a cuenta de empresa**
-  - **Opción A - Transfer Ownership** (recomendado):
-    - Settings del repo → Danger Zone → Transfer ownership
+    - Configurada en `api/send-email.js`
+  - **Remitente**: Pendiente de configurar (depende del dominio)
     - Transferir de `LucasSA97` a la nueva cuenta de empresa
   - **Opción B - Fork + Archive**:
     - Hacer fork del repo a la cuenta de empresa

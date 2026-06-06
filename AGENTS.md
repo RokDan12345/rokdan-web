@@ -167,13 +167,12 @@ npx shadcn@latest add <component-name>
 ## Git Workflow
 
 ### Commits
-- **Author**: Must use `satfuncionalmallorca.web@gmail.com` for Vercel deployments
+- **Author**: Must use `rokdan.web@gmail.com` for Vercel deployments
 - **Messages**: Clear, concise, in English
 - **Format**: Conventional commits preferred (e.g., `feat:`, `fix:`, `docs:`)
 
 ### Branches
 - **Main**: Auto-deploys to production on Vercel
-- **Dual repos**: Code syncs to personal and business repositories
 
 ## Common Tasks
 
@@ -202,8 +201,8 @@ Modify score threshold in `api/send-email.js:37` (default: 0.5)
 
 ## Production Notes
 
-- **Domain**: satfuncionalmallorca.com (DNS verified)
-- **Email sender**: `contacto@satfuncionalmallorca.com`
-- **Email recipient**: `satfuncionalmallorca@gmail.com`
+- **Domain**: Pending configuration
+- **Email sender**: Configured in `api/send-email.js` (domain setup pending)
+- **Email recipient**: `rokdan.servicios@gmail.com`
 - **Resend limitation**: Can ONLY send from verified domains or `@resend.dev`
 - **Auto-deploy**: Push to `main` triggers Vercel deployment

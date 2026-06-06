@@ -109,18 +109,18 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
   // Map services to their images
   const getServiceImage = (service: string) => {
     const imageMap: { [key: string]: string } = {
-      "Aires Acondicionados": "/air-repair-2.webp", 
-      "Calderas a Gas y Gasoil": "/gas-boiler.avif",
-      "Lavadoras": "/mantenimiento-lavadora.webp",
-      "Lavavajillas": "/mantenimiento-lavavajillas.webp",
-      "Hornos": "/mantenimiento-horno.webp",
-      "Vitrocerámica": "/mantenimiento-vitro.webp",
-      "Inducción": "/mantenimiento-induccion.webp",
-      "Cocinas a Gas": "/cocina-gas.webp",
-      "Neveras": "/reparacion-de-neveras.webp",
-      "Campanas Extractoras": "/reparacion-campanas.webp",
-      "Televisores": "/tv-repair.webp",
-      "Calentadores de Agua": "/reparacion-calentador.webp",
+      "Reformas Integrales": "/reformas-integrales.webp",
+      "Acabados": "/acabados.webp",
+      "Electricidad": "/electricidad.webp",
+      "Fontanería": "/fontaneria.webp",
+      "Placas Solares": "/placas-solares.webp",
+      "Piscinas": "/piscinas.webp",
+      "Informes de Arquitectura": "/informes-arquitectura.webp",
+      "Climatización": "/climatizacion.webp",
+      "Carpintería": "/carpinteria.webp",
+      "Albañilería": "/albanileria.webp",
+      "Tejados e Impermeabilización": "/tejados-impermeabilizacion.webp",
+      "Cerrajería": "/cerrajeria.webp",
     };
     return imageMap[service] || "/placeholder.svg";
   };
@@ -158,7 +158,7 @@ const ServicesCarousel = ({ services, className = "", accentColor = "orange" }: 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="text-center mb-12">
           <h2 className={`text-4xl font-bold mb-8 ${accentColor === 'cyan' ? 'text-landing2-navy' : accentColor === 'orange-landing1' ? 'text-landing1-blueDark' : 'text-landing3-blueDark'}`}>
-            Reparamos
+            Gestión de Servicios
           </h2>
           
           {/* Rotating Text */}
