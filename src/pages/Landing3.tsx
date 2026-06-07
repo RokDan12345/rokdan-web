@@ -76,7 +76,7 @@ const Landing3 = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-landing3-blueDark mb-6 leading-tight break-words">
-                Reformas Generales: Creamos tu hogar
+                Gestión de Servicios: Creamos tu hogar
                 <span className="text-landing3-orange"> desde cero</span>
               </h1>
               <p className="text-xl text-landing3-text/80 mb-8 leading-relaxed">
