@@ -3,6 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import ContactBanner from "@/components/ContactBanner";
 import ServicesCarousel from "@/components/ServicesCarousel";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 import ContactForm from "@/components/ContactForm";
 import { useState } from "react";
 import { Home, Paintbrush, Zap, Droplets, Sun, Waves, FileText, Clock, Key, ShieldCheck, Wind, Hammer, HardHat, Umbrella, KeyRound } from "lucide-react";
@@ -373,6 +374,70 @@ const Landing3 = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <TestimonialCarousel className="bg-landing3-bg" />
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-12 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-landing3-blueDark mb-4">
+              Preguntas Frecuentes
+            </h2>
+            <p className="text-lg text-landing3-text/70">
+              Resolvemos tus dudas sobre nuestros servicios
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="faq-1" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                ¿Dónde trabaja ROKDAN?
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                ROKDAN presta servicios de reformas y construcción en Madrid y alrededores. Trabajamos en viviendas, locales comerciales y comunidades de propietarios en toda la comunidad autónoma de Madrid.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-2" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                ¿Qué servicios ofrece ROKDAN?
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                Ofrecemos reformas integrales, acabados, electricidad, fontanería, placas solares, piscinas, informes de arquitectura, climatización, carpintería, albañilería, tejados e impermeabilización, y cerrajería. Somos una empresa integral que se encarga de todo el proceso.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-3" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                ¿Cómo solicitar un presupuesto?
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                Puedes solicitar un presupuesto sin compromiso a través de nuestro formulario de contacto, por WhatsApp al 618 794 696, o llamando al 606 023 698. Te contactaremos en menos de 24 horas para evaluar tu proyecto.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-4" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                ¿Cuánto tiempo tarda una reforma?
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                Depende del tipo de proyecto. Una reforma de cocina o baño completa suele tardar entre 2 y 4 semanas. Proyectos más amplios como reformas integrales pueden extenderse de 1 a 3 meses. Siempre establecemos plazos claros antes de comenzar.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-5" className="border-2 border-landing3-blueDark/10 rounded-2xl px-6 hover:border-landing3-orange transition-colors">
+              <AccordionTrigger className="text-xl font-bold text-landing3-blueDark hover:text-landing3-orange hover:no-underline">
+                ¿Ofrecen garantía en sus trabajos?
+              </AccordionTrigger>
+              <AccordionContent className="text-landing3-text/70 leading-relaxed">
+                Sí, ofrecemos garantía total en todos nuestros trabajos. Nos encargamos de todo el proceso y nos aseguramos de que el resultado sea el esperado sin molestias ni sorpresas para el cliente.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
